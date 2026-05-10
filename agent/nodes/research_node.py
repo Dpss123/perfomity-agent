@@ -11,8 +11,6 @@ Output added to state: state["research"]
 
 import json
 from agent.state import AgentState
-from agent.tools.web_search import search, search_answer
-from agent.tools.scraper import scrape_multiple
 from agent.tools.llm import llm
 
 SYSTEM = """You are a market research analyst for luxury D2C brands in India.
@@ -100,11 +98,7 @@ Return ONLY the JSON array."""
     return _fallback_competitors()
 
 
-def _extract_trends(trend_answer: str, trend_search: str) -> dict:
-    prompt = f"""Based on this market data about Indian luxury candle trends:
 
-Answer: {trend_answer}
-Search results: {trend_search}
 
 Return JSON:
 {{
