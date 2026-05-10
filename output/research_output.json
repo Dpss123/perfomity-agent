@@ -1,0 +1,122 @@
+{
+  "competitors": [
+    {
+      "name": "Smiisenses",
+      "url": "https://smiisenses.com/",
+      "positioning": "Smiisenses creates clean, cruelty-free candles that bring a sense of warmth, ease, and quiet luxury into everyday living spaces. They offer private label candle manufacturing services for global clients.",
+      "price_range": "₹475–₹2,999",
+      "strengths": "Experienced private label candle manufacturers",
+      "target_audience": "Modern homes and individuals seeking luxury fragrance"
+    },
+    {
+      "name": "Candles by Midnight",
+      "url": "https://candlesbymidnight.com/",
+      "positioning": "Candles by Midnight focuses on clean-burning, hand-poured soy wax candles blended with natural fragrance oils. They prioritize craftsmanship and performance in their products.",
+      "price_range": "Not specified",
+      "strengths": "High-quality fragrance throw and clean burn",
+      "target_audience": "Individuals seeking handmade, high-quality candles"
+    },
+    {
+      "name": "The Uchi Store",
+      "url": "https://theuchistore.com/",
+      "positioning": "The Uchi Store offers handcrafted soy wax candle collections with unique fragrances. They emphasize the joy of small everyday practices in life.",
+      "price_range": "₹2,000 and above",
+      "strengths": "Unique, handcrafted products with a focus on everyday joy",
+      "target_audience": "Individuals seeking luxury, handcrafted home decor items"
+    },
+    {
+      "name": "SORCISH",
+      "url": "https://www.sorcish.com/",
+      "positioning": "SORCISH delivers luxurious candles that feel premium before and after lighting. They prioritize creating the best overall experience for their customers.",
+      "price_range": "Not specified",
+      "strengths": "Luxurious, high-quality candles with a focus on customer experience",
+      "target_audience": "Luxury candle buyers seeking a premium experience"
+    },
+    {
+      "name": "JiViSa",
+      "url": "Not specified",
+      "positioning": "JiViSa consistently ranks among the most trusted Indian candle brands, offering natural soy wax candles with a clean burn. They prioritize fragrance quality and customer trust.",
+      "price_range": "Not specified",
+      "strengths": "Trusted brand with natural, clean-burning candles",
+      "target_audience": "Individuals seeking trusted, natural candle brands"
+    }
+  ],
+  "product_trends": {
+    "top_scents": [
+      "Sandalwood",
+      "Rose",
+      "Grapefruit",
+      "Jasmine",
+      "Citrus",
+      "Woody"
+    ],
+    "recommended_skus": [
+      {
+        "name": "Fête candle",
+        "description": "Joyful floral candle in pastel ceramic jar",
+        "price_inr": 2000
+      },
+      {
+        "name": "Flame candle",
+        "description": "Festive citrus woody candle in pink ceramic jar",
+        "price_inr": 2000
+      }
+    ],
+    "packaging_trends": [
+      "Sustainable packaging",
+      "Eco-friendly materials",
+      "Zero-waste packaging"
+    ],
+    "seasonal_opportunities": [
+      "Diwali gifting",
+      "Anniversary gifting",
+      "Festive season corporate gifting"
+    ]
+  },
+  "pricing_analysis": {
+    "market_segments": {
+      "budget": {
+        "price_range": "₹500–₹1,200",
+        "examples": "Diptyque, Jo Malone dupes"
+      },
+      "mid": {
+        "price_range": "₹1,200–₹3,000",
+        "examples": "Voluspa, Illume"
+      },
+      "premium": {
+        "price_range": "₹3,000–₹6,000",
+        "examples": "Jo Malone, Byredo"
+      },
+      "ultra_premium": {
+        "price_range": "₹6,000–₹12,000",
+        "examples": "Cire Trudon, Fornasetti"
+      }
+    },
+    "recommended_entry_price": 2499,
+    "recommended_hero_price": 4999,
+    "recommended_gift_price": 1999,
+    "launch_strategy": "Enter the market with a competitive pricing strategy, focusing on the premium segment with a hero product priced at ₹4999. Offer a limited-time discount of 15% on the first purchase to incentivize customers and create buzz around the brand.",
+    "discount_recommendation": "Offer a 15% discount on all products for the first week after launch to drive sales and increase customer engagement."
+  },
+  "brand_direction": {
+    "brand_archetype": "The Connoisseur",
+    "tone_adjectives": [
+      "Refined",
+      "Understated",
+      "Sophisticated",
+      "Warm"
+    ],
+    "copy_style": "Write in a manner that is effortless, yet evocative. Describe the sensory experience of Lumière's handcrafted soy candles, using language that is both poetic and precise. Emphasize the attention to detail and the passion that goes into crafting each candle, while also highlighting the unique benefits of soy wax and the carefully curated fragrances.",
+    "key_differentiators": [
+      "Handcrafted soy candles with unique, complex fragrances",
+      "Luxury packaging that is both elegant and sustainable",
+      "A focus on creating a sensory experience that elevates the everyday"
+    ],
+    "brand_promise": "To illuminate your space and senses with exquisite, handcrafted soy candles that embody the essence of modern, minimal luxury",
+    "what_to_avoid": [
+      "Using overly flashy or attention-seeking language",
+      "Focusing too much on price or promotions, rather than the value and quality of the products",
+      "Ignoring the importance of sustainability and eco-friendliness in the brand's messaging and practices"
+    ]
+  }
+}
