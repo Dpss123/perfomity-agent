@@ -1,18 +1,4 @@
-"""
-Lumière — Shopify Store Builder Agent
-======================================
-Perfomity Media · AI Agent Developer Screening Assignment
 
-Usage:
-  python main.py                          # runs with default brief
-  python main.py "your custom brief"      # runs with custom brief
-
-Output saved to output/ folder:
-  research_output.json   — Deliverable 2
-  store_assets.json      — Deliverable 3
-  shopify_schema.json    — Deliverable 4
-  handoff_report.md      — Decision summary
-"""
 
 import sys
 import os
