@@ -35,19 +35,7 @@ def is_configured() -> bool:
     return bool(os.getenv("SHOPIFY_ACCESS_TOKEN") and os.getenv("SHOPIFY_STORE_URL"))
 
 
-def _post(endpoint: str, payload: dict) -> dict:
-    base    = _base()
-    headers = _headers()
-    if not base or not headers:
-        return {"error": "Shopify not configured"}
-    time.sleep(0.6)  # Stay under 2 req/sec rate limit
-    try:
-        r = requests.post(f"{base}{endpoint}", headers=headers, json=payload, timeout=15)
-        r.raise_for_status()
-        return r.json()
-    except requests.HTTPError as e:
-        return {"error": str(e), "body": r.text}
-    except Exception as e:
+
         return {"error": str(e)}
 
 
