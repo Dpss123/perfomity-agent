@@ -1,0 +1,9 @@
+Copyright (c) 2026 Dheerendra Pratap Singh
+
+All rights reserved.
+
+This source code and related materials are provided solely for evaluation purposes to Perfomity Media.
+
+No permission is granted to copy, modify, distribute, deploy, sublicense, sell, or use this project commercially without explicit written consent from the author.
+
+Unauthorized usage is prohibited.
