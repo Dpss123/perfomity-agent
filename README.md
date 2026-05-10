@@ -1,4 +1,4 @@
-# Lumière — Shopify Store Builder AI Agent
+# Lumière - Shopify Store Builder AI Agent
 **Perfomity Media · AI Agent Developer Screening Assignment**
 
 ---
@@ -68,10 +68,10 @@ python main.py "Your custom business brief here"
 
 ### 4. View output
 All outputs saved to `output/` folder:
-- `research_output.json` — competitor data, trends, pricing
-- `store_assets.json` — all generated copy and product listings
-- `shopify_schema.json` — Shopify API-ready JSON
-- `handoff_report.md` — decision summary report
+- `research_output.json` - competitor data, trends, pricing
+- `store_assets.json` - all generated copy and product listings
+- `shopify_schema.json` - Shopify API-ready JSON
+- `handoff_report.md` - decision summary report
 
 ---
 
@@ -91,13 +91,13 @@ All outputs saved to `output/` folder:
 ## Limitations
 
 - Research quality depends on Tavily results for the Indian candle market (smaller data pool than Western markets)
-- No image generation — placeholder image URLs used in product listings
+- No image generation - placeholder image URLs used in product listings
 - Shopify theme/CSS customisation requires a separate manual step
-- Agent runs sequentially — parallel execution not implemented in this version
+- Agent runs sequentially - parallel execution not implemented in this version
 - BeautifulSoup scraping may be blocked by some sites; fallback data used in that case
 
 ---
 
 ## Framework
 
-Built with **LangGraph** (StateGraph) — chosen because it provides explicit node/edge control over the pipeline, clean state passing between steps, and is the most production-relevant framework for multi-step agent workflows per the assignment spec.
+Built with **LangGraph** (StateGraph) - chosen because it provides explicit node/edge control over the pipeline, clean state passing between steps, and is the most production-relevant framework for multi-step agent workflows per the assignment spec.
