@@ -1,5 +1,6 @@
 """
 Shopify Admin API Tool
+======================
 Free dev store: partners.shopify.com
 Admin → Settings → Apps → Develop apps → Create app
 Scopes needed: write_products, write_collections, write_content
@@ -35,7 +36,18 @@ def is_configured() -> bool:
     return bool(os.getenv("SHOPIFY_ACCESS_TOKEN") and os.getenv("SHOPIFY_STORE_URL"))
 
 
-
+def _post(endpoint: str, payload: dict) -> dict:
+    """POST to the Shopify Admin API with a 0.6s delay to respect rate limits."""
+    base = _base()
+    headers = _headers()
+    if not base or not headers:
+        return {"error": "Shopify credentials not configured"}
+    try:
+        time.sleep(0.6)  # Stay within Shopify's 2 req/sec limit
+        resp = requests.post(f"{base}{endpoint}", json=payload, headers=headers, timeout=20)
+        resp.raise_for_status()
+        return resp.json()
+    except Exception as e:
         return {"error": str(e)}
 
 

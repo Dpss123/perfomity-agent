@@ -1,49 +1,49 @@
 {
   "homepage": {
-    "hero_headline": "Wrapped in Warmth",
-    "hero_subheadline": "Indulge your senses in soothing aromas and gentle ambiance, crafted just for you",
+    "hero_headline": "Enlightened State of Mind",
+    "hero_subheadline": "Immerse yourself in serene ambiance and soothing scents that calm the mind",
     "hero_cta_primary": "Explore Now",
     "hero_cta_secondary": "Learn More",
     "value_propositions": [
       {
+        "icon": "candle",
+        "title": "Handcrafted Quality",
+        "body": "Expertly crafted soy wax candles for a refined ambiance and sensory experience"
+      },
+      {
         "icon": "leaf",
-        "title": "Sustainable Luxury",
-        "body": "Eco-friendly soy wax candles, carefully handcrafted to evoke serenity and tranquility"
+        "title": "Eco Friendly",
+        "body": "Sustainable soy wax for a greener tomorrow and a clearer conscience"
       },
       {
-        "icon": "pencil",
-        "title": "Attention to Detail",
-        "body": "Precision pouring and meticulous fragrance blending, resulting in unique sensory experiences"
-      },
-      {
-        "icon": "flame",
-        "title": "Sensory Experience",
-        "body": "Rich, complex scents that transport you to a world of warmth and comfort, evoking emotions"
+        "icon": "heart",
+        "title": "Love and Care",
+        "body": "Each candle is carefully handcrafted with love to create a warm and inviting atmosphere"
       }
     ],
     "social_proof": {
-      "section_headline": "Loved by Our Customers",
-      "testimonial": "Lumière candles have become my go-to for unwinding after a long day, the scents are so soothing and calming",
+      "section_headline": "What Our Customers Say",
+      "testimonial": "Lumière candles have transformed my home into a serene oasis, perfect for relaxation and self-care",
       "customer_name": "Aisha K",
       "customer_city": "Mumbai",
       "rating": 5
     },
-    "featured_collection_headline": "New Arrivals Collection",
-    "newsletter_headline": "Stay Illuminated",
-    "newsletter_subtext": "Get exclusive updates on new collections, promotions, and tips for a more serene you"
+    "featured_collection_headline": "Limited Edition Candles",
+    "newsletter_headline": "Stay Enlightened",
+    "newsletter_subtext": "Subscribe to our newsletter for exclusive updates and promotions"
   },
   "products": [
     {
       "handle": "lumiere-noir",
       "title": "Lumière Noir",
-      "subtitle": "Dark, Resinous Evening Solace",
-      "description_html": "<p>As dusk descends, Lumière Noir envelops you in an aura of mystery and allure. This masterfully handcrafted soy candle combines the richness of sandalwood with the depth of oud, transporting you to a world of evening serenity. The matte-black jar, a testament to understated elegance, seems to whisper tales of the night, as the soft, golden glow of the flame dances within. With each gentle flicker, the resinous scent of sandalwood and oud wafts through the air, imbuing your space with an unmistakable sense of luxury and refinement. Whether you seek to unwind after a long day or set the tone for an intimate evening, Lumière Noir is the perfect companion, its dark, resinous beauty a constant reminder of the beauty that lies in the stillness of the night.</p><p>As the fragrance fills your home, it's not just the scent that you notice, but the way it makes you feel - grounded, centered, and at peace. The world outside may be chaotic, but within the warm, golden light of Lumière Noir, all is calm, and all is right with the world.</p>",
+      "subtitle": "Dark, mysterious evening allure",
+      "description_html": "<p>As dusk falls, Lumière Noir envelops you in an aura of mystery and allure. The deep, resinous scent of sandalwood and oud wraps around you, transporting you to a world of dark, velvety nights and whispered secrets. The flickering flame of this luxurious candle casts shadows on the walls, as the fragrance weaves a spell of seduction and intrigue. Perfect for an evening of quiet contemplation or a sophisticated dinner party, Lumière Noir is the epitome of refined, understated elegance. Let the soft, golden glow and the intoxicating aroma of this exquisite candle transport you to a realm of luxury and refinement.</p><p>With its matte-black jar and sleek, minimalist design, Lumière Noir is a stunning addition to any room, its beauty and sophistication evident in every detail. Whether you're seeking to create a dramatic ambiance or simply wish to indulge in a moment of quiet luxury, this exquisite candle is the perfect choice.</p>",
       "bullet_features": [
-        "Handcrafted using high-quality soy wax",
-        "Burn time: approximately 40 hours",
-        "Net weight: 200g",
-        "Fragrance: Sandalwood and Oud",
-        "Perfect for creating a serene evening ambiance"
+        "Handcrafted with high-quality soy wax",
+        "200g candle in a matte-black jar",
+        "Burn time of approximately 40 hours",
+        "Fragrance notes of sandalwood and oud",
+        "Perfect for creating a sophisticated ambiance"
       ],
       "price": 1299,
       "compare_at_price": 1499,
@@ -66,19 +66,21 @@
       },
       "seo_meta_tags": {
         "title": "Lumière Noir Soy Candle",
-        "description": "Luxury handcrafted soy candle with sandalwood and oud",
+        "description": "Luxurious soy candle with sandalwood and oud",
         "keywords": [
-          "sandalwood candle",
-          "oud candle",
-          "soy wax candle"
+          "soy candle",
+          "sandalwood",
+          "oud",
+          "luxury candle",
+          "home decor"
         ]
       },
       "shopify_tags": [
-        "Scented Candle",
-        "Luxury Home Decor",
-        "Soy Wax",
-        "Handcrafted",
-        "Evening Ambiance"
+        "Soy Candle",
+        "Luxury Candle",
+        "Home Decor",
+        "Sandalwood",
+        "Oud"
       ],
       "product_type": "Scented Candle",
       "vendor": "Lumière",
@@ -86,22 +88,22 @@
         {
           "title": "200g",
           "price": 1299,
-          "sku": "LUM-NOIR-200",
-          "inventory_quantity": 50
+          "sku": "LN-200G",
+          "inventory_quantity": 100
         }
       ]
     },
     {
       "handle": "lumiere-blanc",
       "title": "Lumière Blanc",
-      "subtitle": "Fresh Morning Minimalist Chic",
-      "description_html": "<p>The gentle warmth of morning light, the soft serenade of birdsong, and the promise of a new day - Lumière Blanc captures the essence of these fleeting moments in a beautifully handcrafted soy candle. Housed in an elegant ivory ceramic jar with a gold lid, this candle is a masterclass in understated luxury. As the flame flickers to life, the crisp, clean scent of white tea and bergamot fills the air, transporting you to a world of serenity and tranquility. Whether you seek to start your day on a positive note or simply wish to create a peaceful ambiance, Lumière Blanc is the perfect choice, its fresh, minimalist beauty a constant reminder of the beauty that lies in the stillness of the morning.</p><p>As the fragrance wafts through your home, it's not just the scent that you notice, but the way it makes you feel - refreshed, revitalized, and ready to take on the day. The world outside may be chaotic, but within the warm, golden light of Lumière Blanc, all is calm, and all is right with the world.</p>",
+      "subtitle": "Fresh, minimal morning serenity",
+      "description_html": "<p>As the sun rises, Lumière Blanc fills your space with the fresh, uplifting scent of white tea and bergamot. The delicate, citrusy aroma of this exquisite candle is the perfect way to start your day, invigorating your senses and leaving you feeling refreshed and revitalized. The soft, golden light of the candle casts a warm glow, as the fragrance transports you to a world of serenity and tranquility. Perfect for a quiet morning moment or a peaceful afternoon retreat, Lumière Blanc is the epitome of understated elegance and refined sophistication.</p><p>With its elegant ivory ceramic jar and gold lid, Lumière Blanc is a beautiful addition to any room, its classic design and sophisticated fragrance evident in every detail. Whether you're seeking to create a peaceful ambiance or simply wish to indulge in a moment of quiet luxury, this exquisite candle is the perfect choice.</p>",
       "bullet_features": [
-        "Handcrafted using high-quality soy wax",
-        "Burn time: approximately 30 hours",
-        "Net weight: 150g",
-        "Fragrance: White Tea and Bergamot",
-        "Perfect for creating a peaceful morning ambiance"
+        "Handcrafted with high-quality soy wax",
+        "150g candle in an ivory ceramic jar",
+        "Burn time of approximately 30 hours",
+        "Fragrance notes of white tea and bergamot",
+        "Perfect for creating a fresh, uplifting ambiance"
       ],
       "price": 999,
       "compare_at_price": 1149,
@@ -109,34 +111,36 @@
       "burn_time_hours": 30,
       "scent_notes": {
         "top": [
-          "Grapefruit",
-          "Lemon"
+          "Bergamot",
+          "Grapefruit"
         ],
         "heart": [
           "White Tea",
           "Jasmine"
         ],
         "base": [
-          "Bergamot",
           "Musk",
-          "Sandalmwood"
+          "Sandalwood",
+          "Vanilla"
         ]
       },
       "seo_meta_tags": {
         "title": "Lumière Blanc Soy Candle",
-        "description": "Luxury handcrafted soy candle with white tea and bergamot",
+        "description": "Luxurious soy candle with white tea and bergamot",
         "keywords": [
-          "white tea candle",
-          "bergamot candle",
-          "soy wax candle"
+          "soy candle",
+          "white tea",
+          "bergamot",
+          "luxury candle",
+          "home decor"
         ]
       },
       "shopify_tags": [
-        "Scented Candle",
-        "Luxury Home Decor",
-        "Soy Wax",
-        "Handcrafted",
-        "Morning Ambiance"
+        "Soy Candle",
+        "Luxury Candle",
+        "Home Decor",
+        "White Tea",
+        "Bergamot"
       ],
       "product_type": "Scented Candle",
       "vendor": "Lumière",
@@ -144,22 +148,22 @@
         {
           "title": "150g",
           "price": 999,
-          "sku": "LUM-BLANC-150",
-          "inventory_quantity": 50
+          "sku": "LB-150G",
+          "inventory_quantity": 100
         }
       ]
     },
     {
       "handle": "la-nuit-gift-set",
       "title": "La Nuit Gift Set",
-      "subtitle": "Elegant Duo for Special Moments",
-      "description_html": "<p>There are moments in life that deserve to be celebrated, and what better way to do so than with the gift of luxury and elegance? The La Nuit Gift Set from Lumière is a beautifully curated duo of handcrafted soy candles, each one a masterpiece in its own right. The first, Rose Jasmine, is a delicate floral dance of rose and jasmine, while the second, Cedarwood Vetiver, is a rich, woody blend of cedarwood and vetiver. Presented in a stunning magnetic velvet gift box, this set is the perfect way to show your loved ones that you care, its elegant beauty a constant reminder of the thought and love that goes into every detail.</p><p>As the candles burn, the fragrance fills the air, transporting you to a world of serenity and tranquility. The rose and jasmine evoke the sweetness of love, while the cedarwood and vetiver evoke the warmth of connection. Whether you're celebrating a special occasion or simply wish to show your appreciation, the La Nuit Gift Set is the perfect choice, its elegant, sophisticated beauty a constant reminder of the beauty that lies in the act of giving.</p>",
+      "subtitle": "Elegant, alluring gifting experience",
+      "description_html": "<p>Indulge your loved ones in the luxury of Lumière with our exquisite La Nuit Gift Set. This stunning collection features two 100g candles, each with a unique and alluring fragrance. The Rose Jasmine candle fills the air with the sweet, floral scent of rose and jasmine, while the Cedarwood Vetiver candle transports you to a world of earthy, woody sophistication. Perfect for gifting to friends, family, or that special someone, this beautiful gift set is sure to impress.</p><p>Presented in a elegant magnetic velvet gift box, the La Nuit Gift Set is a thoughtful and luxurious way to show you care. The candles are handcrafted with high-quality soy wax and feature unique, complex fragrances that are sure to delight. Whether you're seeking a gift for a special occasion or simply wish to treat someone to a moment of luxury, the La Nuit Gift Set is the perfect choice.</p>",
       "bullet_features": [
-        "Handcrafted using high-quality soy wax",
-        "Two 100g candles: Rose Jasmine and Cedarwood Vetiver",
-        "Burn time: approximately 20 hours each",
-        "Presented in a stunning magnetic velvet gift box",
-        "Perfect for gifting on special occasions"
+        "Two 100g candles in a magnetic velvet gift box",
+        "Handcrafted with high-quality soy wax",
+        "Fragrance notes of rose, jasmine, cedarwood, and vetiver",
+        "Burn time of approximately 20 hours per candle",
+        "Perfect for gifting to friends, family, or loved ones"
       ],
       "price": 2199,
       "compare_at_price": 2499,
@@ -168,43 +172,45 @@
       "scent_notes": {
         "top": [
           "Bergamot",
-          "Lemon"
+          "Mandarin"
         ],
         "heart": [
           "Rose",
-          "Jasmine"
+          "Jasmine",
+          "Cedarwood"
         ],
         "base": [
-          "Cedarwood",
           "Vetiver",
+          "Sandalwood",
           "Musk"
         ]
       },
       "seo_meta_tags": {
-        "title": "La Nuit Gift Set Soy Candles",
-        "description": "Luxury handcrafted soy candle gift set with rose jasmine and cedarwood vetiver",
+        "title": "La Nuit Gift Set",
+        "description": "Luxurious gift set with two soy candles",
         "keywords": [
           "gift set",
-          "soy wax candles",
-          "rose jasmine candle",
-          "cedarwood vetiver candle"
+          "soy candle",
+          "luxury gift",
+          "home decor",
+          "fragrance"
         ]
       },
       "shopify_tags": [
         "Gift Set",
-        "Luxury Home Decor",
-        "Soy Wax",
-        "Handcrafted",
-        "Special Occasions"
+        "Soy Candle",
+        "Luxury Gift",
+        "Home Decor",
+        "Fragrance"
       ],
       "product_type": "Gift Set",
       "vendor": "Lumière",
       "variants": [
         {
-          "title": "2 x 100g",
+          "title": "Gift Set",
           "price": 2199,
-          "sku": "LUM-LANUIT-200",
-          "inventory_quantity": 20
+          "sku": "LN-GS",
+          "inventory_quantity": 100
         }
       ]
     }
@@ -212,14 +218,14 @@
   "collection": {
     "title": "The Signature Collection",
     "handle": "signature-collection",
-    "description_html": "<p>Immerse yourself in the opulence of Lumière's The Signature Collection, where exquisite handcrafted soy candles transport you to a realm of serenity and sophistication. Each carefully curated scent is a masterful blend of essential oils, evoking the essence of a bygone era. As the soft glow of the candle dances across the room, the ambiance is set for a truly unforgettable experience.</p>",
+    "description_html": "<p>Indulge in the essence of refined luxury with Lumière's The Signature Collection, where handcrafted soy candles weave a tapestry of warmth and elegance. Each carefully curated fragrance is a masterful blend of sophisticated notes, inviting you to surrender to the beauty of the moment. As the soft glow of our candles illuminates your space, let the world slow down, and the beauty of simplicity unfold.</p>",
     "seo_title": "Lumière Signature",
-    "seo_description": "Luxury handcrafted soy candles for the discerning few, crafted with love and precision."
+    "seo_description": "Experience refined luxury with Lumière's handcrafted soy candles, expertly blending sophisticated fragrances"
   },
   "about_us": {
-    "headline": "Illuminating Spaces, Enlightening Senses",
-    "body_html": "<p>Lumière crafts exquisite, eco-friendly soy candles that evoke a sensory experience. With unique fragrances and a focus on sustainability, we illuminate your space and senses.</p>",
-    "founder_note": "Creating warmth, one candle at a time",
+    "headline": "Illuminating Moments, Crafted with Love",
+    "body_html": "<p>Lumière's journey began with a passion for creating exquisite, handcrafted soy candles that evoke warmth and sophistication. We craft unique scent profiles to transport you to a world of serenity and elegance.</p>",
+    "founder_note": "Creating ambiance, one candle at a time",
     "founder_name": "Priya",
     "founder_title": "Founder, Lumière"
   },

@@ -10,7 +10,12 @@ _client = None
 
 
 def get_client() -> TavilyClient:
-    
+    global _client
+    if _client is None:
+        key = os.getenv("TAVILY_API_KEY")
+        if not key:
+            raise ValueError("TAVILY_API_KEY not set in .env")
+        _client = TavilyClient(api_key=key)
     return _client
 
 

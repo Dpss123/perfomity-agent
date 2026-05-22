@@ -12,6 +12,8 @@ Output added to state: state["research"]
 import json
 from agent.state import AgentState
 from agent.tools.llm import llm
+from agent.tools.web_search import search, search_answer
+from agent.tools.scraper import scrape_multiple
 
 SYSTEM = """You are a market research analyst for luxury D2C brands in India.
 Extract structured insights from raw search and scrape data.
@@ -41,7 +43,7 @@ def research_node(state: AgentState) -> AgentState:
     print(f"  → Scraping {len(competitor_urls)} competitor pages...")
     scraped = scrape_multiple(competitor_urls)
 
-    # ── 3. Synthesise competitors ─────────────────────────────────
+    # ── 3. Synthesise all data via LLM ────────────────────────────
     raw_search  = json.dumps(competitor_results[:10], ensure_ascii=False)
     raw_scraped = json.dumps(scraped, ensure_ascii=False)[:3000]
 
@@ -98,7 +100,14 @@ Return ONLY the JSON array."""
     return _fallback_competitors()
 
 
+def _extract_trends(trend_answer: str, trend_search_data: str) -> dict:
+    prompt = f"""Based on this market research about Indian luxury candle trends:
 
+Answer: {trend_answer}
+
+Search data: {trend_search_data[:2000]}
+
+Synthesise product and packaging trends for a new luxury soy candle brand.
 
 Return JSON:
 {{

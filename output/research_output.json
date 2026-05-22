@@ -1,122 +1,122 @@
 {
   "competitors": [
     {
+      "name": "The White Willow",
+      "url": "Not Available",
+      "positioning": "The White Willow is a luxury brand offering sophisticated scents and elegant packaging, emphasizing the use of the finest ingredients and intricate designs. Their candles are a testament to craftsmanship and quality, ensuring a premium and unadulterated burning experience.",
+      "price_range": "Not Available",
+      "strengths": "Luxurious and sophisticated scents",
+      "target_audience": "Luxury-seeking individuals and gift-givers"
+    },
+    {
       "name": "Smiisenses",
-      "url": "https://smiisenses.com/",
-      "positioning": "Smiisenses creates clean, cruelty-free candles that bring a sense of warmth, ease, and quiet luxury into everyday living spaces. They offer private label candle manufacturing services for global clients.",
-      "price_range": "₹475–₹2,999",
-      "strengths": "Experienced private label candle manufacturers",
-      "target_audience": "Modern homes and individuals seeking luxury fragrance"
+      "url": "https://smiisenses.com",
+      "positioning": "Smiisenses offers premium scented soy candles with a focus on elegant packaging and refined fragrance experiences. Their products are suitable for modern home decor and gifting, with a range of options to cater to different tastes and preferences.",
+      "price_range": "₹475–₹2,499",
+      "strengths": "Elegant packaging and refined fragrance experiences",
+      "target_audience": "Individuals seeking premium home decor and gifting options"
     },
     {
-      "name": "Candles by Midnight",
-      "url": "https://candlesbymidnight.com/",
-      "positioning": "Candles by Midnight focuses on clean-burning, hand-poured soy wax candles blended with natural fragrance oils. They prioritize craftsmanship and performance in their products.",
-      "price_range": "Not specified",
-      "strengths": "High-quality fragrance throw and clean burn",
-      "target_audience": "Individuals seeking handmade, high-quality candles"
+      "name": "Roci India",
+      "url": "Not Available",
+      "positioning": "Roci India blends French perfumery with Indian aesthetics, delivering luxury soy candles with elegant scent profiles and premium finishes. Their products are ideal for luxury gifting, bedroom or vanity styling, and refined fragrance lovers.",
+      "price_range": "₹2,250–₹8,180",
+      "strengths": "Unique blend of French and Indian aesthetics",
+      "target_audience": "Luxury-seeking individuals and gift-givers"
     },
     {
-      "name": "The Uchi Store",
-      "url": "https://theuchistore.com/",
-      "positioning": "The Uchi Store offers handcrafted soy wax candle collections with unique fragrances. They emphasize the joy of small everyday practices in life.",
-      "price_range": "₹2,000 and above",
-      "strengths": "Unique, handcrafted products with a focus on everyday joy",
-      "target_audience": "Individuals seeking luxury, handcrafted home decor items"
-    },
-    {
-      "name": "SORCISH",
-      "url": "https://www.sorcish.com/",
-      "positioning": "SORCISH delivers luxurious candles that feel premium before and after lighting. They prioritize creating the best overall experience for their customers.",
-      "price_range": "Not specified",
-      "strengths": "Luxurious, high-quality candles with a focus on customer experience",
-      "target_audience": "Luxury candle buyers seeking a premium experience"
+      "name": "Sorcish",
+      "url": "https://www.sorcish.com",
+      "positioning": "Sorcish offers luxury aesthetic soy wax candles for home decor and gifting, with a focus on premium look, fragrance experience, and decorative elegance. Their products are suitable for buyers looking for a refined and high-quality candle experience.",
+      "price_range": "Not Available",
+      "strengths": "Luxury aesthetic and high-quality candle experience",
+      "target_audience": "Individuals seeking premium home decor and gifting options"
     },
     {
       "name": "JiViSa",
-      "url": "Not specified",
-      "positioning": "JiViSa consistently ranks among the most trusted Indian candle brands, offering natural soy wax candles with a clean burn. They prioritize fragrance quality and customer trust.",
-      "price_range": "Not specified",
-      "strengths": "Trusted brand with natural, clean-burning candles",
-      "target_audience": "Individuals seeking trusted, natural candle brands"
+      "url": "Not Available",
+      "positioning": "JiViSa consistently ranks among the most trusted Indian candle brands, offering natural soy wax candles that burn cleanly with minimal soot and a smooth, balanced scent. Their products are ideal for those seeking a clean burn and fragrance quality.",
+      "price_range": "Not Available",
+      "strengths": "Natural soy wax and clean burn",
+      "target_audience": "Individuals seeking high-quality and natural candle options"
     }
   ],
   "product_trends": {
     "top_scents": [
       "Sandalwood",
       "Rose",
-      "Grapefruit",
+      "Lavender",
       "Jasmine",
-      "Citrus",
-      "Woody"
+      "Vanilla",
+      "Frankincense"
     ],
     "recommended_skus": [
       {
-        "name": "Fête candle",
-        "description": "Joyful floral candle in pastel ceramic jar",
-        "price_inr": 2000
+        "name": "Midnight Bloom",
+        "description": "A hand-poured soy wax candle with a floral scent profile and elegant packaging",
+        "price_inr": 2500
       },
       {
-        "name": "Flame candle",
-        "description": "Festive citrus woody candle in pink ceramic jar",
-        "price_inr": 2000
+        "name": "Sandalwood Serenity",
+        "description": "A luxury soy wax candle with a soothing sandalwood fragrance and premium finish",
+        "price_inr": 3500
       }
     ],
     "packaging_trends": [
-      "Sustainable packaging",
-      "Eco-friendly materials",
-      "Zero-waste packaging"
+      "Eco-friendly and sustainable packaging materials",
+      "Minimalist and elegant design aesthetics",
+      "Customizable and personalized packaging options for gifting"
     ],
     "seasonal_opportunities": [
-      "Diwali gifting",
-      "Anniversary gifting",
-      "Festive season corporate gifting"
+      "Diwali and festive season gifting",
+      "Wedding season and luxury gifting",
+      "Summer and monsoon season wellness and relaxation"
     ]
   },
   "pricing_analysis": {
     "market_segments": {
       "budget": {
         "price_range": "₹500–₹1,200",
-        "examples": "Diptyque, Jo Malone dupes"
+        "examples": "Diptyque, Jo Malone clones"
       },
       "mid": {
         "price_range": "₹1,200–₹3,000",
-        "examples": "Voluspa, Illume"
+        "examples": "local artisans, smaller D2C brands"
       },
       "premium": {
         "price_range": "₹3,000–₹6,000",
-        "examples": "Jo Malone, Byredo"
+        "examples": "International brands like Voluspa, Illume"
       },
       "ultra_premium": {
-        "price_range": "₹6,000–₹12,000",
-        "examples": "Cire Trudon, Fornasetti"
+        "price_range": "₹6,000–₹15,000",
+        "examples": "High-end brands like Byredo, Baobab"
       }
     },
     "recommended_entry_price": 2499,
-    "recommended_hero_price": 4999,
-    "recommended_gift_price": 1999,
-    "launch_strategy": "Enter the market with a competitive pricing strategy, focusing on the premium segment with a hero product priced at ₹4999. Offer a limited-time discount of 15% on the first purchase to incentivize customers and create buzz around the brand.",
-    "discount_recommendation": "Offer a 15% discount on all products for the first week after launch to drive sales and increase customer engagement."
+    "recommended_hero_price": 4499,
+    "recommended_gift_price": 2999,
+    "launch_strategy": "Enter the market with a competitive pricing strategy, focusing on the premium segment with a hero product priced at ₹4,499. Utilize influencer marketing and targeted advertising to create buzz around the brand and drive sales.",
+    "discount_recommendation": "Offer a limited-time 15% discount at launch to incentivize first-time customers and encourage word-of-mouth marketing."
   },
   "brand_direction": {
-    "brand_archetype": "The Connoisseur",
+    "brand_archetype": "The Sophisticate",
     "tone_adjectives": [
+      "Elegant",
       "Refined",
-      "Understated",
-      "Sophisticated",
-      "Warm"
+      "Minimalist",
+      "Luxurious"
     ],
-    "copy_style": "Write in a manner that is effortless, yet evocative. Describe the sensory experience of Lumière's handcrafted soy candles, using language that is both poetic and precise. Emphasize the attention to detail and the passion that goes into crafting each candle, while also highlighting the unique benefits of soy wax and the carefully curated fragrances.",
+    "copy_style": "Write in a concise and sophisticated tone, focusing on the premium quality and craftsmanship of Lumière's handcrafted soy candles. Emphasize the unique scent profiles and the attention to detail in the luxury packaging, while maintaining a sense of modernity and simplicity.",
     "key_differentiators": [
-      "Handcrafted soy candles with unique, complex fragrances",
-      "Luxury packaging that is both elegant and sustainable",
-      "A focus on creating a sensory experience that elevates the everyday"
+      "Handcrafted soy candles with unique scent profiles",
+      "Luxury packaging with a focus on minimalist design",
+      "Premium quality and attention to detail in every product"
     ],
-    "brand_promise": "To illuminate your space and senses with exquisite, handcrafted soy candles that embody the essence of modern, minimal luxury",
+    "brand_promise": "Elevate your space with the warmth and sophistication of Lumière's premium handcrafted soy candles",
     "what_to_avoid": [
-      "Using overly flashy or attention-seeking language",
-      "Focusing too much on price or promotions, rather than the value and quality of the products",
-      "Ignoring the importance of sustainability and eco-friendliness in the brand's messaging and practices"
+      "Using overly elaborate or flashy language",
+      "Focusing too much on price rather than quality and craftsmanship",
+      "Incorporating cluttered or busy design elements"
     ]
   }
 }
