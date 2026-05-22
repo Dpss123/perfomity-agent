@@ -1,6 +1,8 @@
 # Lumière - Shopify Store Builder AI Agent
 **Perfomity Media · AI Agent Developer Screening Assignment**
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-gold?style=flat-square&logo=github)](https://github.com/Dpss123/perfomity-agent)
+
 ---
 
 ## Architecture Overview
