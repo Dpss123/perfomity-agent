@@ -1,746 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lumière AI Agent — Shopify Store Builder | Perfomity Media</title>
-  <meta name="description" content="An autonomous AI agent that researches markets, builds brand strategies, generates store content, and deploys live Shopify stores — end-to-end, from a single brief." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&family=Italiana&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
+  <title>Lumière — AI Shopify Store Builder</title>
+  <meta name="description" content="Build a complete Shopify store autonomously. Fill in your brand brief and our AI agent handles the rest."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- ── NAV ─────────────────────────────────────────────── -->
+<!-- ── NAVBAR ───────────────────────────────────── -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo">
-      <span class="logo-lum">Lumière</span>
-      <span class="logo-ai">AI</span>
+    <a href="#" class="nav-logo" onclick="showView('landing')">
+      Lumière <span class="logo-ai-badge">AI</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="#how-it-works">How It Works</a></li>
-      <li><a href="#pipeline">Pipeline</a></li>
-      <li><a href="#results">Results</a></li>
-      <li><a href="#tech-stack">Tech Stack</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-    <a href="https://github.com/Dpss123/perfomity-agent" target="_blank" class="nav-cta">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-      View on GitHub
-    </a>
-    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <a href="https://github.com/Dpss123/perfomity-agent" target="_blank" class="nav-gh">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <button class="btn-nav-cta" onclick="showView('form')">Build My Store →</button>
+    </div>
   </div>
 </nav>
 
-<!-- ── HERO ────────────────────────────────────────────── -->
-<section id="hero">
+<!-- ═══════════════════════════════════════════════ -->
+<!-- VIEW 1: LANDING                                 -->
+<!-- ═══════════════════════════════════════════════ -->
+<main id="view-landing" class="view active">
   <canvas id="particle-canvas"></canvas>
-  <div class="hero-image-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge reveal-up">
+
+  <section class="landing-hero">
+    <div class="lh-badge">
       <span class="badge-dot"></span>
       Perfomity Media · AI Agent Assignment
     </div>
-    <h1 class="hero-title reveal-up delay-1">
-      From a <em>Brief</em><br>
-      to a <em>Live</em> Store.<br>
-      <span class="hero-title-brand">Autonomously.</span>
+    <h1 class="lh-title">
+      Turn Your Brief Into a<br/>
+      <em>Live Shopify Store.</em><br/>
+      <span class="lh-title-auto">Autonomously.</span>
     </h1>
-    <p class="hero-sub reveal-up delay-2">
-      A LangGraph-powered AI agent that researches markets, crafts brand strategy,
-      generates all store content, and deploys a real Shopify store — end-to-end,
-      from a single text brief.
+    <p class="lh-sub">
+      Fill in your brand brief. Our LangGraph-powered AI agent researches your market,
+      builds your brand strategy, generates all store content, and deploys it live to Shopify —
+      in under 3 minutes.
     </p>
-    <div class="hero-actions reveal-up delay-3">
-      <a href="#pipeline" class="btn-primary">
-        See How It Works
+    <div class="lh-actions">
+      <button class="btn-primary" id="btn-start-building" onclick="showView('form')">
+        Build My Shopify Store
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="#results" class="btn-ghost">View Live Results</a>
-    </div>
-    <div class="hero-stats reveal-up delay-4">
-      <div class="stat-item">
-        <span class="stat-num" data-target="4">0</span>
-        <span class="stat-label">AI Agent Nodes</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="3">0</span>
-        <span class="stat-label">Products Deployed</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="100">0</span><span class="stat-pct">%</span>
-        <span class="stat-label">Autonomous</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="0">~2</span>
-        <span class="stat-label">Min End-to-End</span>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll-hint">
-    <span>Scroll to explore</span>
-    <div class="scroll-arrow"></div>
-  </div>
-</section>
-
-<!-- ── HOW IT WORKS ────────────────────────────────────── -->
-<section id="how-it-works">
-  <div class="container">
-    <div class="section-header reveal-up">
-      <span class="section-tag">The Concept</span>
-      <h2 class="section-title">One Brief.<br>One Agent.<br>One <em>Live Store.</em></h2>
-      <p class="section-sub">Give the agent a brand brief in plain English. It handles everything — no templates, no manual steps, no shortcuts.</p>
+      </button>
+      <a href="#how-it-works" class="btn-ghost-landing">See How It Works ↓</a>
     </div>
 
-    <div class="brief-demo reveal-up">
-      <div class="brief-card">
-        <div class="brief-card-label">INPUT BRIEF</div>
-        <div class="brief-card-text" id="typing-text"></div>
-        <div class="brief-cursor">|</div>
+    <div class="lh-pipeline-preview">
+      <div class="pip-step">
+        <div class="pip-icon">📝</div>
+        <div class="pip-label">Your Brief</div>
       </div>
-      <div class="brief-arrow">
-        <div class="brief-arrow-inner">
-          <div class="arrow-pulse"></div>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A55A" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          <span>AI Agent</span>
-        </div>
+      <div class="pip-arrow">→</div>
+      <div class="pip-step">
+        <div class="pip-icon">🔍</div>
+        <div class="pip-label">Research</div>
       </div>
-      <div class="output-cards">
-        <div class="output-card">
-          <div class="oc-icon">🔍</div>
-          <div class="oc-label">Market Research</div>
-          <div class="oc-desc">5 competitors · Pricing · Trends</div>
-        </div>
-        <div class="output-card">
-          <div class="oc-icon">🎨</div>
-          <div class="oc-label">Brand Strategy</div>
-          <div class="oc-desc">Palette · Typography · Voice</div>
-        </div>
-        <div class="output-card">
-          <div class="oc-icon">✍️</div>
-          <div class="oc-label">Store Content</div>
-          <div class="oc-desc">Copy · Products · SEO</div>
-        </div>
-        <div class="output-card active">
-          <div class="oc-icon">🚀</div>
-          <div class="oc-label">Live Shopify Store</div>
-          <div class="oc-desc">Deployed · Ready to Sell</div>
-        </div>
+      <div class="pip-arrow">→</div>
+      <div class="pip-step">
+        <div class="pip-icon">🎨</div>
+        <div class="pip-label">Strategy</div>
+      </div>
+      <div class="pip-arrow">→</div>
+      <div class="pip-step">
+        <div class="pip-icon">✍️</div>
+        <div class="pip-label">Content</div>
+      </div>
+      <div class="pip-arrow">→</div>
+      <div class="pip-step active">
+        <div class="pip-icon">🚀</div>
+        <div class="pip-label">Live Store</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── PIPELINE ────────────────────────────────────────── -->
-<section id="pipeline">
-  <div class="container">
-    <div class="section-header reveal-up">
-      <span class="section-tag">Architecture</span>
-      <h2 class="section-title">The 4-Node <em>LangGraph</em> Pipeline</h2>
-      <p class="section-sub">Each node is an autonomous AI agent with its own tools, LLM calls, and fallback logic. State flows sequentially through the graph.</p>
+  <section class="landing-features" id="how-it-works">
+    <div class="lf-header">
+      <span class="section-tag">How It Works</span>
+      <h2 class="lf-title">From Words to <em>Website</em></h2>
     </div>
-
-    <div class="pipeline-wrapper reveal-up">
-      <div class="pipeline-track">
-        <div class="pipeline-line"></div>
-        <div class="pipeline-progress" id="pipeline-progress"></div>
+    <div class="lf-grid">
+      <div class="lf-card">
+        <div class="lf-num">01</div>
+        <div class="lf-icon">📝</div>
+        <h3>Fill the Form</h3>
+        <p>Tell us your brand name, what you sell, who you sell to, your price range, and the vibe you want. Takes 2 minutes.</p>
       </div>
+      <div class="lf-card">
+        <div class="lf-num">02</div>
+        <div class="lf-icon">🤖</div>
+        <h3>AI Runs Autonomously</h3>
+        <p>Our 4-node LangGraph agent researches competitors, builds your brand strategy, and generates all store content — zero manual work.</p>
+      </div>
+      <div class="lf-card">
+        <div class="lf-num">03</div>
+        <div class="lf-icon">👀</div>
+        <h3>Watch It Live</h3>
+        <p>See the agent work in real-time. Every step streamed to your screen — research, strategy, content, deployment.</p>
+      </div>
+      <div class="lf-card">
+        <div class="lf-num">04</div>
+        <div class="lf-icon">🚀</div>
+        <h3>Store is Live</h3>
+        <p>Products created, collections built, About Us page live, SEO metadata set — all deployed to your Shopify store via the Admin API.</p>
+      </div>
+    </div>
+    <div class="lf-cta">
+      <button class="btn-primary" onclick="showView('form')">
+        Start Building Now →
+      </button>
+    </div>
+  </section>
 
-      <div class="pipeline-nodes">
-        <!-- Node 1 -->
-        <div class="pnode" id="pnode-1" data-node="1">
-          <div class="pnode-connector left"></div>
-          <div class="pnode-header">
-            <div class="pnode-num">01</div>
-            <div class="pnode-icon">🔍</div>
+  <footer class="landing-footer">
+    <div class="lfoot-inner">
+      <span class="lfoot-logo">Lumière <em>AI</em></span>
+      <span class="lfoot-copy">Built for Perfomity Media · AI Agent Screening Assignment</span>
+      <a href="https://github.com/Dpss123/perfomity-agent" target="_blank" class="lfoot-gh">GitHub →</a>
+    </div>
+  </footer>
+</main>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- VIEW 2: FORM WIZARD                             -->
+<!-- ═══════════════════════════════════════════════ -->
+<main id="view-form" class="view">
+  <div class="form-layout">
+
+    <!-- Left: Form -->
+    <div class="form-left">
+      <div class="form-header">
+        <button class="back-to-landing" onclick="showView('landing')">
+          ← Back
+        </button>
+        <div class="step-indicators">
+          <div class="si-item active" id="si-1">
+            <div class="si-dot"><span>1</span></div>
+            <div class="si-label">Brand</div>
           </div>
-          <h3 class="pnode-title">Research</h3>
-          <p class="pnode-sub">Market Intelligence</p>
-          <div class="pnode-tools">
-            <span class="tool-badge">Tavily Search</span>
-            <span class="tool-badge">BeautifulSoup</span>
-            <span class="tool-badge">Groq LLM</span>
+          <div class="si-line" id="sl-1"></div>
+          <div class="si-item" id="si-2">
+            <div class="si-dot"><span>2</span></div>
+            <div class="si-label">Market</div>
           </div>
-          <div class="pnode-detail">
-            <ul>
-              <li>Queries competitor stores, pricing, trends</li>
-              <li>Scrapes 4+ competitor pages live</li>
-              <li>LLM synthesises structured JSON insights</li>
-              <li>Fallback data if scraping is blocked</li>
-            </ul>
-            <div class="pnode-output">
-              <span class="output-label">Output →</span> <code>research_output.json</code>
+          <div class="si-line" id="sl-2"></div>
+          <div class="si-item" id="si-3">
+            <div class="si-dot"><span>3</span></div>
+            <div class="si-label">Personality</div>
+          </div>
+          <div class="si-line" id="sl-3"></div>
+          <div class="si-item" id="si-4">
+            <div class="si-dot"><span>4</span></div>
+            <div class="si-label">API Setup</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 1: Brand Basics -->
+      <div class="step-panel active" id="sp-1">
+        <div class="sp-header">
+          <div class="sp-step-tag">Step 1 of 4</div>
+          <h2 class="sp-title">Your <em>Brand</em></h2>
+          <p class="sp-sub">Tell us what you're building.</p>
+        </div>
+        <div class="sp-fields">
+          <div class="field-group">
+            <label class="field-label" for="f-brand-name">Brand Name <span class="req">*</span></label>
+            <input type="text" id="f-brand-name" class="field-input" placeholder="e.g. Lumière" oninput="updatePreview()"/>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-product">What do you sell? <span class="req">*</span></label>
+            <input type="text" id="f-product" class="field-input" placeholder="e.g. premium handcrafted soy candles" oninput="updatePreview()"/>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-product-desc">Describe your product</label>
+            <textarea id="f-product-desc" class="field-textarea" placeholder="Tell us more about your products — materials, quality, packaging, uniqueness..." oninput="updatePreview()"></textarea>
+          </div>
+        </div>
+        <div class="sp-nav">
+          <div></div>
+          <button class="btn-primary" onclick="nextStep()">
+            Next: Your Market →
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Target Market -->
+      <div class="step-panel" id="sp-2">
+        <div class="sp-header">
+          <div class="sp-step-tag">Step 2 of 4</div>
+          <h2 class="sp-title">Your <em>Market</em></h2>
+          <p class="sp-sub">Who are you selling to, and at what price?</p>
+        </div>
+        <div class="sp-fields">
+          <div class="field-group">
+            <label class="field-label" for="f-audience">Who is your target customer? <span class="req">*</span></label>
+            <input type="text" id="f-audience" class="field-input" placeholder="e.g. urban women, working professionals, young parents" oninput="updatePreview()"/>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label class="field-label" for="f-age-from">Age From</label>
+              <input type="number" id="f-age-from" class="field-input" placeholder="25" min="13" max="80" oninput="updatePreview()"/>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-age-to">Age To</label>
+              <input type="number" id="f-age-to" class="field-input" placeholder="40" min="13" max="80" oninput="updatePreview()"/>
             </div>
           </div>
-          <div class="pnode-connector right"></div>
-        </div>
-
-        <!-- Node 2 -->
-        <div class="pnode" id="pnode-2" data-node="2">
-          <div class="pnode-connector left"></div>
-          <div class="pnode-header">
-            <div class="pnode-num">02</div>
-            <div class="pnode-icon">🎨</div>
+          <div class="field-group">
+            <label class="field-label" for="f-location">Location / Market <span class="req">*</span></label>
+            <input type="text" id="f-location" class="field-input" placeholder="e.g. India, US, UK" oninput="updatePreview()"/>
           </div>
-          <h3 class="pnode-title">Strategy</h3>
-          <p class="pnode-sub">Brand Architecture</p>
-          <div class="pnode-tools">
-            <span class="tool-badge">Groq LLM</span>
-            <span class="tool-badge">Design System</span>
-          </div>
-          <div class="pnode-detail">
-            <ul>
-              <li>Builds tagline, brand story, values</li>
-              <li>Creates target persona (Priya, 28–38)</li>
-              <li>Defines Lumière Noir & Or palette</li>
-              <li>Cormorant Garamond + Jost typography</li>
-            </ul>
-            <div class="pnode-output">
-              <span class="output-label">Output →</span> <code>state["strategy"]</code>
+          <div class="field-row">
+            <div class="field-group">
+              <label class="field-label" for="f-currency">Currency</label>
+              <select id="f-currency" class="field-select" onchange="updatePreview()">
+                <option value="₹">₹ INR</option>
+                <option value="$">$ USD</option>
+                <option value="£">£ GBP</option>
+                <option value="€">€ EUR</option>
+              </select>
             </div>
-          </div>
-          <div class="pnode-connector right"></div>
-        </div>
-
-        <!-- Node 3 -->
-        <div class="pnode" id="pnode-3" data-node="3">
-          <div class="pnode-connector left"></div>
-          <div class="pnode-header">
-            <div class="pnode-num">03</div>
-            <div class="pnode-icon">✍️</div>
-          </div>
-          <h3 class="pnode-title">Content</h3>
-          <p class="pnode-sub">Store Generation</p>
-          <div class="pnode-tools">
-            <span class="tool-badge">Groq LLM</span>
-            <span class="tool-badge">HTML Builder</span>
-          </div>
-          <div class="pnode-detail">
-            <ul>
-              <li>Hero copy, collections, product listings</li>
-              <li>3 full products with variants & SEO meta</li>
-              <li>About Us narrative + brand voice</li>
-              <li>12+ SEO meta tags generated</li>
-            </ul>
-            <div class="pnode-output">
-              <span class="output-label">Output →</span> <code>store_assets.json</code>
+            <div class="field-group">
+              <label class="field-label" for="f-price-min">Min Price</label>
+              <input type="number" id="f-price-min" class="field-input" placeholder="599" oninput="updatePreview()"/>
             </div>
-          </div>
-          <div class="pnode-connector right"></div>
-        </div>
-
-        <!-- Node 4 -->
-        <div class="pnode" id="pnode-4" data-node="4">
-          <div class="pnode-connector left"></div>
-          <div class="pnode-header">
-            <div class="pnode-num">04</div>
-            <div class="pnode-icon">🚀</div>
-          </div>
-          <h3 class="pnode-title">Shopify</h3>
-          <p class="pnode-sub">Live Deployment</p>
-          <div class="pnode-tools">
-            <span class="tool-badge">Shopify Admin API</span>
-            <span class="tool-badge">REST 2024-01</span>
-          </div>
-          <div class="pnode-detail">
-            <ul>
-              <li>Creates collections via Admin API</li>
-              <li>Publishes 3 products with full metadata</li>
-              <li>Generates About Us page live</li>
-              <li>Rate-limited to 2 req/sec (production-safe)</li>
-            </ul>
-            <div class="pnode-output">
-              <span class="output-label">Output →</span> <code>shopify_schema.json</code>
+            <div class="field-group">
+              <label class="field-label" for="f-price-max">Max Price</label>
+              <input type="number" id="f-price-max" class="field-input" placeholder="2499" oninput="updatePreview()"/>
             </div>
           </div>
         </div>
+        <div class="sp-nav">
+          <button class="btn-ghost-sm" onclick="prevStep()">← Back</button>
+          <button class="btn-primary" onclick="nextStep()">Next: Brand Feel →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Brand Personality -->
+      <div class="step-panel" id="sp-3">
+        <div class="sp-header">
+          <div class="sp-step-tag">Step 3 of 4</div>
+          <h2 class="sp-title">Brand <em>Personality</em></h2>
+          <p class="sp-sub">How should your brand feel? What's the vibe?</p>
+        </div>
+        <div class="sp-fields">
+          <div class="field-group">
+            <label class="field-label">Pick your brand vibes <span class="field-hint">(click to select multiple)</span></label>
+            <div class="vibe-chips" id="vibe-chips">
+              <button type="button" class="vibe-chip" data-vibe="Luxury" onclick="toggleVibe(this)">✦ Luxury</button>
+              <button type="button" class="vibe-chip" data-vibe="Minimal" onclick="toggleVibe(this)">◻ Minimal</button>
+              <button type="button" class="vibe-chip" data-vibe="Modern" onclick="toggleVibe(this)">◈ Modern</button>
+              <button type="button" class="vibe-chip" data-vibe="Bold" onclick="toggleVibe(this)">◉ Bold</button>
+              <button type="button" class="vibe-chip" data-vibe="Natural" onclick="toggleVibe(this)">✿ Natural</button>
+              <button type="button" class="vibe-chip" data-vibe="Artisan" onclick="toggleVibe(this)">◎ Artisan</button>
+              <button type="button" class="vibe-chip" data-vibe="Premium" onclick="toggleVibe(this)">◆ Premium</button>
+              <button type="button" class="vibe-chip" data-vibe="Playful" onclick="toggleVibe(this)">✺ Playful</button>
+              <button type="button" class="vibe-chip" data-vibe="Sophisticated" onclick="toggleVibe(this)">◇ Sophisticated</button>
+              <button type="button" class="vibe-chip" data-vibe="Organic" onclick="toggleVibe(this)">⊛ Organic</button>
+              <button type="button" class="vibe-chip" data-vibe="Sustainable" onclick="toggleVibe(this)">✳ Sustainable</button>
+              <button type="button" class="vibe-chip" data-vibe="Aspirational" onclick="toggleVibe(this)">▲ Aspirational</button>
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-competitors">Brands you admire / similar to</label>
+            <input type="text" id="f-competitors" class="field-input" placeholder="e.g. Forest Essentials, Jo Malone, Aesop" oninput="updatePreview()"/>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-extra">Anything else? <span class="field-hint">(optional)</span></label>
+            <textarea id="f-extra" class="field-textarea" rows="3" placeholder="Pages needed, special products, any specific requirements..." oninput="updatePreview()"></textarea>
+          </div>
+        </div>
+        <div class="sp-nav">
+          <button class="btn-ghost-sm" onclick="prevStep()">← Back</button>
+          <button class="btn-primary" onclick="nextStep()">Next: API Setup →</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: API Setup -->
+      <div class="step-panel" id="sp-4">
+        <div class="sp-header">
+          <div class="sp-step-tag">Step 4 of 4</div>
+          <h2 class="sp-title">API <em>Setup</em></h2>
+          <p class="sp-sub">These are pre-loaded from your .env file. Override only if needed.</p>
+        </div>
+        <div class="sp-fields">
+          <div class="api-notice">
+            <div class="api-notice-icon">🔐</div>
+            <div class="api-notice-text">
+              If you've already set up your <code>.env</code> file, you can skip this step and click <strong>Build My Store</strong> directly.
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-groq">Groq API Key <span class="field-hint">(overrides .env)</span></label>
+            <input type="password" id="f-groq" class="field-input" placeholder="gsk_..."/>
+            <div class="field-sub">Get free key at <a href="https://console.groq.com" target="_blank">console.groq.com</a></div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-tavily">Tavily API Key <span class="field-hint">(overrides .env)</span></label>
+            <input type="password" id="f-tavily" class="field-input" placeholder="tvly-..."/>
+            <div class="field-sub">Get free key at <a href="https://tavily.com" target="_blank">tavily.com</a></div>
+          </div>
+          <div class="field-divider">
+            <span>Shopify Deployment (Optional)</span>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-shop-url">Shopify Store URL</label>
+            <input type="text" id="f-shop-url" class="field-input" placeholder="your-store.myshopify.com"/>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-shop-token">Shopify Access Token</label>
+            <input type="password" id="f-shop-token" class="field-input" placeholder="shpat_..."/>
+            <div class="field-sub">Admin → Settings → Apps → Develop apps → Create app</div>
+          </div>
+        </div>
+        <div class="sp-nav">
+          <button class="btn-ghost-sm" onclick="prevStep()">← Back</button>
+          <button class="btn-primary btn-launch" id="btn-launch" onclick="submitForm()">
+            <span class="btn-launch-icon">🚀</span>
+            Build My Store Now
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="pipeline-image reveal-up">
-      <img src="ai_pipeline_viz.png" alt="AI Pipeline Visualization" loading="lazy" />
+    <!-- Right: Live Brief Preview -->
+    <div class="form-right">
+      <div class="brief-preview-card">
+        <div class="bpc-header">
+          <div class="bpc-dot"></div>
+          <span>Live Brief Preview</span>
+        </div>
+        <div class="bpc-body">
+          <div id="brief-preview-text" class="bpc-text empty">
+            Fill in the form to see your AI brief preview...
+          </div>
+        </div>
+        <div class="bpc-footer">
+          <span class="bpc-label">This brief will be sent to the AI agent</span>
+        </div>
+      </div>
+
+      <div class="form-side-info">
+        <div class="fsi-item">
+          <div class="fsi-icon">⏱️</div>
+          <div>
+            <strong>~2-3 minutes</strong>
+            <span>Average run time</span>
+          </div>
+        </div>
+        <div class="fsi-item">
+          <div class="fsi-icon">🤖</div>
+          <div>
+            <strong>4 AI nodes</strong>
+            <span>Research · Strategy · Content · Deploy</span>
+          </div>
+        </div>
+        <div class="fsi-item">
+          <div class="fsi-icon">📦</div>
+          <div>
+            <strong>4 output files</strong>
+            <span>Research, Assets, Schema, Report</span>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
-</section>
+</main>
 
-<!-- ── RESULTS ─────────────────────────────────────────── -->
-<section id="results">
-  <div class="container">
-    <div class="section-header reveal-up">
-      <span class="section-tag">Live Output</span>
-      <h2 class="section-title">Real Results from a<br><em>Real Run.</em></h2>
-      <p class="section-sub">These are actual outputs generated by the agent — deployed live to leumiere-store.myshopify.com</p>
+<!-- ═══════════════════════════════════════════════ -->
+<!-- VIEW 3: PROCESSING                              -->
+<!-- ═══════════════════════════════════════════════ -->
+<main id="view-processing" class="view">
+  <div class="processing-container">
+
+    <div class="proc-header">
+      <div class="proc-spinner"></div>
+      <h2 class="proc-title">Building Your <em>Shopify Store...</em></h2>
+      <p class="proc-sub" id="proc-subtitle">Initialising agent pipeline...</p>
     </div>
 
-    <div class="results-tabs reveal-up">
-      <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="products">Products</button>
-        <button class="tab-btn" data-tab="research">Research</button>
-        <button class="tab-btn" data-tab="strategy">Strategy</button>
-        <button class="tab-btn" data-tab="store">Store</button>
+    <div class="proc-progress-bar">
+      <div class="proc-progress-fill" id="proc-progress-fill"></div>
+    </div>
+
+    <!-- Pipeline nodes -->
+    <div class="proc-nodes">
+      <div class="proc-node" id="proc-node-1" data-label="research">
+        <div class="pn-ring"></div>
+        <div class="pn-icon">🔍</div>
+        <div class="pn-title">Research</div>
+        <div class="pn-status">Waiting...</div>
+      </div>
+      <div class="pn-connector" id="pnc-1"></div>
+      <div class="proc-node" id="proc-node-2" data-label="strategy">
+        <div class="pn-ring"></div>
+        <div class="pn-icon">🎨</div>
+        <div class="pn-title">Strategy</div>
+        <div class="pn-status">Waiting...</div>
+      </div>
+      <div class="pn-connector" id="pnc-2"></div>
+      <div class="proc-node" id="proc-node-3" data-label="content">
+        <div class="pn-ring"></div>
+        <div class="pn-icon">✍️</div>
+        <div class="pn-title">Content</div>
+        <div class="pn-status">Waiting...</div>
+      </div>
+      <div class="pn-connector" id="pnc-3"></div>
+      <div class="proc-node" id="proc-node-4" data-label="shopify">
+        <div class="pn-ring"></div>
+        <div class="pn-icon">🚀</div>
+        <div class="pn-title">Shopify</div>
+        <div class="pn-status">Waiting...</div>
+      </div>
+    </div>
+
+    <!-- Live log terminal -->
+    <div class="proc-terminal">
+      <div class="term-header">
+        <div class="term-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="term-title">LIVE AGENT LOG</div>
+        <div class="term-badge" id="term-badge">● RUNNING</div>
+      </div>
+      <div class="term-body" id="term-body">
+        <div class="term-line dim">Waiting for agent to start...</div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- VIEW 4: RESULTS                                 -->
+<!-- ═══════════════════════════════════════════════ -->
+<main id="view-results" class="view">
+  <div class="results-container">
+
+    <!-- Success / Error Banner -->
+    <div class="results-banner" id="results-banner">
+      <div class="rb-icon" id="rb-icon">✅</div>
+      <div class="rb-content">
+        <h2 class="rb-title" id="rb-title">Store Built Successfully!</h2>
+        <p class="rb-sub" id="rb-sub">Your Shopify store has been created and deployed.</p>
+      </div>
+      <div class="rb-actions">
+        <button class="btn-primary" onclick="showView('form')">Build Another Store</button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="results-tabs-wrapper">
+      <div class="rtab-buttons">
+        <button class="rtab-btn active" data-tab="r-overview" onclick="switchResultTab(this)">Overview</button>
+        <button class="rtab-btn" data-tab="r-products" onclick="switchResultTab(this)">Products</button>
+        <button class="rtab-btn" data-tab="r-research" onclick="switchResultTab(this)">Research</button>
+        <button class="rtab-btn" data-tab="r-strategy" onclick="switchResultTab(this)">Strategy</button>
+        <button class="rtab-btn" data-tab="r-files" onclick="switchResultTab(this)">Output Files</button>
+      </div>
+
+      <!-- OVERVIEW TAB -->
+      <div class="rtab-content active" id="r-overview">
+        <div class="r-overview-grid" id="r-overview-grid">
+          <!-- Dynamically populated -->
+          <div class="r-ov-loading">Loading results...</div>
+        </div>
       </div>
 
       <!-- PRODUCTS TAB -->
-      <div class="tab-content active" id="tab-products">
-        <div class="product-showcase">
-          <div class="product-main-image reveal-up">
-            <img src="lumiere_products.png" alt="Lumière Product Line" loading="lazy"/>
-            <div class="product-image-caption">Generated by AI · Deployed to Shopify</div>
-          </div>
-          <div class="product-cards">
-            <div class="prod-card reveal-up delay-1">
-              <div class="prod-card-top">
-                <div class="prod-badge">HERO PRODUCT</div>
-                <div class="prod-price">₹1,299</div>
-              </div>
-              <h3 class="prod-name">Lumière Noir</h3>
-              <p class="prod-desc">200g matte-black jar, Sandalwood & Oud, evening hero. Hand-poured in small batches. 45+ hour burn time.</p>
-              <div class="prod-tags">
-                <span>Sandalwood & Oud</span>
-                <span>200g</span>
-                <span>45hr burn</span>
-              </div>
-              <div class="prod-status deployed">✓ Deployed to Shopify</div>
-            </div>
-            <div class="prod-card reveal-up delay-2">
-              <div class="prod-card-top">
-                <div class="prod-badge entry">ENTRY</div>
-                <div class="prod-price">₹999</div>
-              </div>
-              <h3 class="prod-name">Lumière Blanc</h3>
-              <p class="prod-desc">150g ivory ceramic, White Tea & Bergamot, morning ritual. A whisper of luxury for everyday moments.</p>
-              <div class="prod-tags">
-                <span>White Tea & Bergamot</span>
-                <span>150g</span>
-                <span>35hr burn</span>
-              </div>
-              <div class="prod-status deployed">✓ Deployed to Shopify</div>
-            </div>
-            <div class="prod-card reveal-up delay-3">
-              <div class="prod-card-top">
-                <div class="prod-badge gift">GIFT SET</div>
-                <div class="prod-price">₹2,199</div>
-              </div>
-              <h3 class="prod-name">La Nuit Gift Set</h3>
-              <p class="prod-desc">2×100g in a magnetic gift box. Rose Jasmine & Cedarwood. The definitive Lumière gifting experience.</p>
-              <div class="prod-tags">
-                <span>Rose Jasmine</span>
-                <span>2×100g</span>
-                <span>Gift Box</span>
-              </div>
-              <div class="prod-status deployed">✓ Deployed to Shopify</div>
-            </div>
-          </div>
+      <div class="rtab-content" id="r-products">
+        <div class="r-products-grid" id="r-products-grid">
+          <div class="r-ov-loading">Loading products...</div>
         </div>
       </div>
 
       <!-- RESEARCH TAB -->
-      <div class="tab-content" id="tab-research">
-        <div class="research-grid">
-          <div class="research-block reveal-up">
-            <h4 class="rb-title">🏆 Competitors Identified</h4>
-            <div class="competitor-list">
-              <div class="comp-item">
-                <div class="comp-rank">1</div>
-                <div class="comp-info">
-                  <div class="comp-name">The Forest Essentials</div>
-                  <div class="comp-range">₹1,200 – ₹5,000</div>
-                  <div class="comp-pos">Ultra-premium Ayurvedic beauty</div>
-                </div>
-              </div>
-              <div class="comp-item">
-                <div class="comp-rank">2</div>
-                <div class="comp-info">
-                  <div class="comp-name">Neso & Co</div>
-                  <div class="comp-range">₹799 – ₹2,999</div>
-                  <div class="comp-pos">Artisan soy candles, wellness-first</div>
-                </div>
-              </div>
-              <div class="comp-item">
-                <div class="comp-rank">3</div>
-                <div class="comp-info">
-                  <div class="comp-name">Bombay Candle Company</div>
-                  <div class="comp-range">₹899 – ₹2,499</div>
-                  <div class="comp-pos">Local heritage narrative</div>
-                </div>
-              </div>
-              <div class="comp-item">
-                <div class="comp-rank">4</div>
-                <div class="comp-info">
-                  <div class="comp-name">Juicy Chemistry</div>
-                  <div class="comp-range">₹599 – ₹3,500</div>
-                  <div class="comp-pos">Organic certified transparency</div>
-                </div>
-              </div>
-              <div class="comp-item">
-                <div class="comp-rank">5</div>
-                <div class="comp-info">
-                  <div class="comp-name">Soulflower</div>
-                  <div class="comp-range">₹399 – ₹1,999</div>
-                  <div class="comp-pos">Mass-premium wellness brand</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="research-block reveal-up delay-1">
-            <h4 class="rb-title">📊 Market Pricing Segments</h4>
-            <div class="pricing-chart">
-              <div class="price-bar-row">
-                <span class="pb-label">Budget</span>
-                <div class="pb-track"><div class="pb-fill" style="width:20%">₹200–499</div></div>
-              </div>
-              <div class="price-bar-row">
-                <span class="pb-label">Mid</span>
-                <div class="pb-track"><div class="pb-fill mid" style="width:40%">₹500–899</div></div>
-              </div>
-              <div class="price-bar-row">
-                <span class="pb-label">Premium</span>
-                <div class="pb-track"><div class="pb-fill prem" style="width:70%">₹900–2,499</div></div>
-              </div>
-              <div class="price-bar-row">
-                <span class="pb-label">Ultra</span>
-                <div class="pb-track"><div class="pb-fill ultra" style="width:100%">₹2,500+</div></div>
-              </div>
-            </div>
-            <div class="lumiere-positioning">
-              <span class="lp-badge">Lumière targets Premium tier</span>
-              <p>Entry ₹999 · Hero ₹1,299 · Gift ₹2,199</p>
-            </div>
-          </div>
-
-          <div class="research-block full reveal-up delay-2">
-            <h4 class="rb-title">🕯️ Top Trending Scents</h4>
-            <div class="scent-tags">
-              <span class="scent-tag">Sandalwood & Oud</span>
-              <span class="scent-tag">Rose & Jasmine</span>
-              <span class="scent-tag">White Tea & Bergamot</span>
-              <span class="scent-tag">Cedarwood & Vetiver</span>
-              <span class="scent-tag">Mogra & Musk</span>
-              <span class="scent-tag">Amber & Citrus</span>
-            </div>
-            <div class="seasonal-ops">
-              <div class="season-item">🪔 <strong>Diwali Sets</strong> · 35–40% of annual revenue</div>
-              <div class="season-item">🌹 <strong>Valentine's Day</strong> · Duo pairings</div>
-              <div class="season-item">🌧️ <strong>Monsoon Mood</strong> · Petrichor scents</div>
-            </div>
-          </div>
+      <div class="rtab-content" id="r-research">
+        <div id="r-research-content">
+          <div class="r-ov-loading">Loading research...</div>
         </div>
       </div>
 
       <!-- STRATEGY TAB -->
-      <div class="tab-content" id="tab-strategy">
-        <div class="strategy-grid">
-          <div class="strat-block reveal-up">
-            <h4 class="rb-title">🎨 Color Palette</h4>
-            <div class="palette-grid">
-              <div class="pal-swatch" style="background:#0E0C09">
-                <span class="pal-hex">#0E0C09</span>
-                <span class="pal-name">Lumière Noir</span>
-              </div>
-              <div class="pal-swatch" style="background:#C9A55A">
-                <span class="pal-hex">#C9A55A</span>
-                <span class="pal-name">Champagne Gold</span>
-              </div>
-              <div class="pal-swatch" style="background:#E2C07A">
-                <span class="pal-hex">#E2C07A</span>
-                <span class="pal-name">Warm Gold</span>
-              </div>
-              <div class="pal-swatch light" style="background:#FAF7F0">
-                <span class="pal-hex">#FAF7F0</span>
-                <span class="pal-name">Ivory</span>
-              </div>
-              <div class="pal-swatch light" style="background:#B5A898">
-                <span class="pal-hex">#B5A898</span>
-                <span class="pal-name">Warm Taupe</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="strat-block reveal-up delay-1">
-            <h4 class="rb-title">🔤 Typography System</h4>
-            <div class="typo-showcase">
-              <div class="typo-item">
-                <div class="typo-sample cormorant">Light your finest moments.</div>
-                <div class="typo-meta">
-                  <strong>Cormorant Garamond</strong><br>
-                  Display — Headlines, Product Names
-                </div>
-              </div>
-              <div class="typo-item">
-                <div class="typo-sample jost">Premium handcrafted soy candles</div>
-                <div class="typo-meta">
-                  <strong>Jost</strong><br>
-                  Body — Navigation, Copy, Buttons
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="strat-block reveal-up delay-2">
-            <h4 class="rb-title">👤 Target Persona</h4>
-            <div class="persona-card">
-              <div class="persona-avatar">P</div>
-              <div class="persona-info">
-                <div class="persona-name">Priya</div>
-                <div class="persona-age">28–38 · Urban Professional · Metro India</div>
-                <p class="persona-desc">Design-conscious, buys intentionally. Her home is curated, not decorated. Wants a luxury candle brand that feels Indian without being old-fashioned.</p>
-                <div class="persona-tags">
-                  <span>Metro lifestyle</span>
-                  <span>Premium buyer</span>
-                  <span>Design-first</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="strat-block reveal-up delay-3">
-            <h4 class="rb-title">💬 Brand Voice</h4>
-            <blockquote class="brand-voice-quote">
-              "Write as a woman thinks when buying something beautiful for herself. Sensory, unhurried, precise. Short sentences. Never explain — evoke."
-            </blockquote>
-            <div class="brand-pillars">
-              <div class="bp-item">✦ Handcrafted with intention</div>
-              <div class="bp-item">✦ Fragrance as ritual</div>
-              <div class="bp-item">✦ Indian luxury redefined</div>
-            </div>
-          </div>
+      <div class="rtab-content" id="r-strategy">
+        <div id="r-strategy-content">
+          <div class="r-ov-loading">Loading strategy...</div>
         </div>
       </div>
 
-      <!-- STORE TAB -->
-      <div class="tab-content" id="tab-store">
-        <div class="store-preview">
-          <div class="store-mockup reveal-up">
-            <div class="mockup-browser">
-              <div class="mockup-bar">
-                <div class="mockup-dots"><span></span><span></span><span></span></div>
-                <div class="mockup-url">leumiere-store.myshopify.com</div>
-              </div>
-              <div class="mockup-screen">
-                <div class="mock-nav">
-                  <span class="mock-logo">Lumière</span>
-                  <div class="mock-nav-links"><span>Shop</span><span>Story</span><span>Gift</span></div>
-                </div>
-                <div class="mock-hero">
-                  <div class="mock-hero-content">
-                    <div class="mock-hero-tag">LUMIÈRE</div>
-                    <div class="mock-hero-h1">Light your finest moments.</div>
-                    <div class="mock-hero-sub">Premium handcrafted soy candles for the modern Indian woman.</div>
-                    <div class="mock-hero-btn">Shop The Collection →</div>
-                  </div>
-                </div>
-                <div class="mock-products">
-                  <div class="mock-prod-card">
-                    <div class="mock-prod-img noir"></div>
-                    <div class="mock-prod-name">Lumière Noir</div>
-                    <div class="mock-prod-price">₹1,299</div>
-                  </div>
-                  <div class="mock-prod-card">
-                    <div class="mock-prod-img blanc"></div>
-                    <div class="mock-prod-name">Lumière Blanc</div>
-                    <div class="mock-prod-price">₹999</div>
-                  </div>
-                  <div class="mock-prod-card">
-                    <div class="mock-prod-img gift"></div>
-                    <div class="mock-prod-name">La Nuit Gift Set</div>
-                    <div class="mock-prod-price">₹2,199</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="store-details reveal-up delay-1">
-            <div class="sd-item">
-              <div class="sd-icon">✓</div>
-              <div class="sd-text">
-                <strong>Collection Created</strong>
-                <span>The Signature Collection · Published</span>
-              </div>
-            </div>
-            <div class="sd-item">
-              <div class="sd-icon">✓</div>
-              <div class="sd-text">
-                <strong>3 Products Deployed</strong>
-                <span>With variants, SEO meta, HTML descriptions</span>
-              </div>
-            </div>
-            <div class="sd-item">
-              <div class="sd-icon">✓</div>
-              <div class="sd-text">
-                <strong>About Us Page Live</strong>
-                <span>/about-us · Full brand story</span>
-              </div>
-            </div>
-            <div class="sd-item">
-              <div class="sd-icon">✓</div>
-              <div class="sd-text">
-                <strong>SEO Metadata Generated</strong>
-                <span>Title tags, meta descriptions, handles</span>
-              </div>
-            </div>
-            <div class="sd-item">
-              <div class="sd-icon">✓</div>
-              <div class="sd-text">
-                <strong>Schema JSON Exported</strong>
-                <span>API-ready import file for re-use</span>
-              </div>
-            </div>
-            <a href="https://leumiere-store.myshopify.com" target="_blank" class="btn-primary mt-16">
-              Visit Live Store →
-            </a>
-          </div>
+      <!-- FILES TAB -->
+      <div class="rtab-content" id="r-files">
+        <div class="r-files-grid">
+          <a href="output/research_output.json" target="_blank" class="r-file-card" id="rfc-research">
+            <div class="rfc-icon">📊</div>
+            <div class="rfc-name">research_output.json</div>
+            <div class="rfc-desc">Competitors, trends, pricing, brand direction</div>
+            <div class="rfc-dl">Download →</div>
+          </a>
+          <a href="output/store_assets.json" target="_blank" class="r-file-card" id="rfc-assets">
+            <div class="rfc-icon">📝</div>
+            <div class="rfc-name">store_assets.json</div>
+            <div class="rfc-desc">All generated copy, products, collection, About Us</div>
+            <div class="rfc-dl">Download →</div>
+          </a>
+          <a href="output/shopify_schema.json" target="_blank" class="r-file-card" id="rfc-schema">
+            <div class="rfc-icon">🔌</div>
+            <div class="rfc-name">shopify_schema.json</div>
+            <div class="rfc-desc">Shopify Admin API-ready import JSON</div>
+            <div class="rfc-dl">Download →</div>
+          </a>
+          <a href="output/handoff_report.md" target="_blank" class="r-file-card" id="rfc-report">
+            <div class="rfc-icon">📋</div>
+            <div class="rfc-name">handoff_report.md</div>
+            <div class="rfc-desc">Full decision summary and rationale</div>
+            <div class="rfc-dl">Download →</div>
+          </a>
         </div>
       </div>
+
     </div>
+
   </div>
-</section>
-
-<!-- ── TECH STACK ──────────────────────────────────────── -->
-<section id="tech-stack">
-  <div class="container">
-    <div class="section-header reveal-up">
-      <span class="section-tag">Built With</span>
-      <h2 class="section-title">Production-Grade<br><em>Tech Stack</em></h2>
-    </div>
-
-    <div class="tech-grid">
-      <div class="tech-card reveal-up delay-1" id="tc-langgraph">
-        <div class="tc-logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="8" height="8" rx="2" fill="#C9A55A"/><rect x="14" y="2" width="8" height="8" rx="2" fill="#C9A55A" opacity=".6"/><rect x="2" y="14" width="8" height="8" rx="2" fill="#C9A55A" opacity=".6"/><rect x="14" y="14" width="8" height="8" rx="2" fill="#C9A55A"/><path d="M10 6h4M6 10v4M18 10v4M10 18h4" stroke="#C9A55A" stroke-width="1.5"/></svg>
-        </div>
-        <h4 class="tc-name">LangGraph</h4>
-        <p class="tc-desc">StateGraph with 4 sequential nodes, typed AgentState passing, and clean edge definitions. The backbone of the entire agent pipeline.</p>
-        <div class="tc-tag">Orchestration</div>
-      </div>
-
-      <div class="tech-card reveal-up delay-2" id="tc-groq">
-        <div class="tc-logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#C9A55A" stroke-width="1.5"/><path d="M8 12h8M12 8l4 4-4 4" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <h4 class="tc-name">Groq + LLaMA 3.3</h4>
-        <p class="tc-desc">llama-3.3-70b-versatile for all LLM reasoning. JSON mode for structured extraction. Used across all 4 nodes with custom system prompts.</p>
-        <div class="tc-tag">AI Inference</div>
-      </div>
-
-      <div class="tech-card reveal-up delay-3" id="tc-tavily">
-        <div class="tc-logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#C9A55A" stroke-width="1.5"/><path d="M20 20l-3-3" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round"/><path d="M8 11h6M11 8v6" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <h4 class="tc-name">Tavily Search API</h4>
-        <p class="tc-desc">Real-time web intelligence — competitor search, trend analysis, and pricing research. Both search() and search_answer() modes used.</p>
-        <div class="tc-tag">Web Intelligence</div>
-      </div>
-
-      <div class="tech-card reveal-up delay-4" id="tc-shopify">
-        <div class="tc-logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M20 7l-1-5-3 .5M4 7h16v13a1 1 0 01-1 1H5a1 1 0 01-1-1V7zM8 7V4a4 4 0 018 0v3" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h4 class="tc-name">Shopify Admin API</h4>
-        <p class="tc-desc">REST API 2024-01 for live store deployment. Creates collections, products, and pages. Rate-limited to 2 req/sec for production safety.</p>
-        <div class="tc-tag">Deployment</div>
-      </div>
-
-      <div class="tech-card reveal-up delay-1" id="tc-bs4">
-        <div class="tc-logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h10" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="18" r="2" stroke="#C9A55A" stroke-width="1.5"/></svg>
-        </div>
-        <h4 class="tc-name">BeautifulSoup4</h4>
-        <p class="tc-desc">Live competitor page scraping for authentic market data. HTML parsing and text extraction from real brand websites.</p>
-        <div class="tc-tag">Web Scraping</div>
-      </div>
-
-      <div class="tech-card reveal-up delay-2" id="tc-python">
-        <div class="tc-logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 7 4 7 6v2h5v1H5C3 9 2 10 2 13s1.5 4 3 4h2v-2.5C7 12 9 11 12 11s5 1 5 3.5V17h2c1.5 0 3-1.5 3-4s-1-4-3-4h-7V8h5V6c0-2-1-4-5-4z" stroke="#C9A55A" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        </div>
-        <h4 class="tc-name">Python 3.11</h4>
-        <p class="tc-desc">TypedDict state management, robust error handling, fallback chains, dotenv config, and clean modular architecture.</p>
-        <div class="tc-tag">Runtime</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ABOUT ────────────────────────────────────────────── -->
-<section id="about">
-  <div class="about-image-bg">
-    <img src="lumiere_about_bg.png" alt="Lumière Studio" />
-    <div class="about-overlay"></div>
-  </div>
-  <div class="container about-content">
-    <div class="about-text reveal-up">
-      <span class="section-tag light">The Assignment</span>
-      <h2 class="section-title light">Built for<br><em>Perfomity Media</em></h2>
-      <p class="about-desc">This project was created as part of Perfomity Media's AI Agent Developer screening assignment. The goal: build a fully autonomous agent that takes a simple brand brief and produces a complete, live Shopify store without any manual intervention.</p>
-      <p class="about-desc">Every component — from the LangGraph pipeline architecture to the fallback logic, from the brand strategy prompts to the rate-limited Shopify deployment — was designed to demonstrate production-grade agent engineering.</p>
-
-      <div class="about-metrics">
-        <div class="am-item">
-          <div class="am-num">4</div>
-          <div class="am-label">Agent Nodes</div>
-        </div>
-        <div class="am-item">
-          <div class="am-num">12+</div>
-          <div class="am-label">LLM Calls</div>
-        </div>
-        <div class="am-item">
-          <div class="am-num">~2min</div>
-          <div class="am-label">Full Runtime</div>
-        </div>
-        <div class="am-item">
-          <div class="am-num">0</div>
-          <div class="am-label">Manual Steps</div>
-        </div>
-      </div>
-
-      <a href="https://github.com/Dpss123/perfomity-agent" target="_blank" class="btn-primary mt-16">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        View Full Source Code
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ──────────────────────────────────────────── -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">Lumière <span>AI</span></div>
-        <p>An autonomous Shopify Store Builder Agent built with LangGraph, Groq LLaMA 3.3, Tavily Search, and the Shopify Admin API.</p>
-      </div>
-      <div class="footer-links">
-        <h5>Project</h5>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#pipeline">Pipeline</a>
-        <a href="#results">Live Results</a>
-        <a href="#tech-stack">Tech Stack</a>
-      </div>
-      <div class="footer-links">
-        <h5>Output Files</h5>
-        <a href="output/research_output.json" target="_blank">research_output.json</a>
-        <a href="output/store_assets.json" target="_blank">store_assets.json</a>
-        <a href="output/shopify_schema.json" target="_blank">shopify_schema.json</a>
-        <a href="output/handoff_report.md" target="_blank">handoff_report.md</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">Built for Perfomity Media · AI Agent Developer Screening Assignment</div>
-      <a href="https://github.com/Dpss123/perfomity-agent" target="_blank" class="footer-gh">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        GitHub
-      </a>
-    </div>
-  </div>
-</footer>
+</main>
 
 <script src="main.js"></script>
 </body>
