@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lumière AI Agent — Shopify Store Builder | Perfomity Media</title>
+  <meta name="description" content="An autonomous AI agent that researches markets, builds brand strategies, generates store content, and deploys live Shopify stores — end-to-end, from a single brief." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&family=Italiana&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-lum">Lumière</span>
+      <span class="logo-ai">AI</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#tech-stack">Tech Stack</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="https://github.com/Dpss123/perfomity-agent" target="_blank" class="nav-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      View on GitHub
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section id="hero">
+  <canvas id="particle-canvas"></canvas>
+  <div class="hero-image-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge reveal-up">
+      <span class="badge-dot"></span>
+      Perfomity Media · AI Agent Assignment
+    </div>
+    <h1 class="hero-title reveal-up delay-1">
+      From a <em>Brief</em><br>
+      to a <em>Live</em> Store.<br>
+      <span class="hero-title-brand">Autonomously.</span>
+    </h1>
+    <p class="hero-sub reveal-up delay-2">
+      A LangGraph-powered AI agent that researches markets, crafts brand strategy,
+      generates all store content, and deploys a real Shopify store — end-to-end,
+      from a single text brief.
+    </p>
+    <div class="hero-actions reveal-up delay-3">
+      <a href="#pipeline" class="btn-primary">
+        See How It Works
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#results" class="btn-ghost">View Live Results</a>
+    </div>
+    <div class="hero-stats reveal-up delay-4">
+      <div class="stat-item">
+        <span class="stat-num" data-target="4">0</span>
+        <span class="stat-label">AI Agent Nodes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-label">Products Deployed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="100">0</span><span class="stat-pct">%</span>
+        <span class="stat-label">Autonomous</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="0">~2</span>
+        <span class="stat-label">Min End-to-End</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll to explore</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ────────────────────────────────────── -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-tag">The Concept</span>
+      <h2 class="section-title">One Brief.<br>One Agent.<br>One <em>Live Store.</em></h2>
+      <p class="section-sub">Give the agent a brand brief in plain English. It handles everything — no templates, no manual steps, no shortcuts.</p>
+    </div>
+
+    <div class="brief-demo reveal-up">
+      <div class="brief-card">
+        <div class="brief-card-label">INPUT BRIEF</div>
+        <div class="brief-card-text" id="typing-text"></div>
+        <div class="brief-cursor">|</div>
+      </div>
+      <div class="brief-arrow">
+        <div class="brief-arrow-inner">
+          <div class="arrow-pulse"></div>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A55A" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span>AI Agent</span>
+        </div>
+      </div>
+      <div class="output-cards">
+        <div class="output-card">
+          <div class="oc-icon">🔍</div>
+          <div class="oc-label">Market Research</div>
+          <div class="oc-desc">5 competitors · Pricing · Trends</div>
+        </div>
+        <div class="output-card">
+          <div class="oc-icon">🎨</div>
+          <div class="oc-label">Brand Strategy</div>
+          <div class="oc-desc">Palette · Typography · Voice</div>
+        </div>
+        <div class="output-card">
+          <div class="oc-icon">✍️</div>
+          <div class="oc-label">Store Content</div>
+          <div class="oc-desc">Copy · Products · SEO</div>
+        </div>
+        <div class="output-card active">
+          <div class="oc-icon">🚀</div>
+          <div class="oc-label">Live Shopify Store</div>
+          <div class="oc-desc">Deployed · Ready to Sell</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PIPELINE ────────────────────────────────────────── -->
+<section id="pipeline">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-tag">Architecture</span>
+      <h2 class="section-title">The 4-Node <em>LangGraph</em> Pipeline</h2>
+      <p class="section-sub">Each node is an autonomous AI agent with its own tools, LLM calls, and fallback logic. State flows sequentially through the graph.</p>
+    </div>
+
+    <div class="pipeline-wrapper reveal-up">
+      <div class="pipeline-track">
+        <div class="pipeline-line"></div>
+        <div class="pipeline-progress" id="pipeline-progress"></div>
+      </div>
+
+      <div class="pipeline-nodes">
+        <!-- Node 1 -->
+        <div class="pnode" id="pnode-1" data-node="1">
+          <div class="pnode-connector left"></div>
+          <div class="pnode-header">
+            <div class="pnode-num">01</div>
+            <div class="pnode-icon">🔍</div>
+          </div>
+          <h3 class="pnode-title">Research</h3>
+          <p class="pnode-sub">Market Intelligence</p>
+          <div class="pnode-tools">
+            <span class="tool-badge">Tavily Search</span>
+            <span class="tool-badge">BeautifulSoup</span>
+            <span class="tool-badge">Groq LLM</span>
+          </div>
+          <div class="pnode-detail">
+            <ul>
+              <li>Queries competitor stores, pricing, trends</li>
+              <li>Scrapes 4+ competitor pages live</li>
+              <li>LLM synthesises structured JSON insights</li>
+              <li>Fallback data if scraping is blocked</li>
+            </ul>
+            <div class="pnode-output">
+              <span class="output-label">Output →</span> <code>research_output.json</code>
+            </div>
+          </div>
+          <div class="pnode-connector right"></div>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="pnode" id="pnode-2" data-node="2">
+          <div class="pnode-connector left"></div>
+          <div class="pnode-header">
+            <div class="pnode-num">02</div>
+            <div class="pnode-icon">🎨</div>
+          </div>
+          <h3 class="pnode-title">Strategy</h3>
+          <p class="pnode-sub">Brand Architecture</p>
+          <div class="pnode-tools">
+            <span class="tool-badge">Groq LLM</span>
+            <span class="tool-badge">Design System</span>
+          </div>
+          <div class="pnode-detail">
+            <ul>
+              <li>Builds tagline, brand story, values</li>
+              <li>Creates target persona (Priya, 28–38)</li>
+              <li>Defines Lumière Noir & Or palette</li>
+              <li>Cormorant Garamond + Jost typography</li>
+            </ul>
+            <div class="pnode-output">
+              <span class="output-label">Output →</span> <code>state["strategy"]</code>
+            </div>
+          </div>
+          <div class="pnode-connector right"></div>
+        </div>
+
+        <!-- Node 3 -->
+        <div class="pnode" id="pnode-3" data-node="3">
+          <div class="pnode-connector left"></div>
+          <div class="pnode-header">
+            <div class="pnode-num">03</div>
+            <div class="pnode-icon">✍️</div>
+          </div>
+          <h3 class="pnode-title">Content</h3>
+          <p class="pnode-sub">Store Generation</p>
+          <div class="pnode-tools">
+            <span class="tool-badge">Groq LLM</span>
+            <span class="tool-badge">HTML Builder</span>
+          </div>
+          <div class="pnode-detail">
+            <ul>
+              <li>Hero copy, collections, product listings</li>
+              <li>3 full products with variants & SEO meta</li>
+              <li>About Us narrative + brand voice</li>
+              <li>12+ SEO meta tags generated</li>
+            </ul>
+            <div class="pnode-output">
+              <span class="output-label">Output →</span> <code>store_assets.json</code>
+            </div>
+          </div>
+          <div class="pnode-connector right"></div>
+        </div>
+
+        <!-- Node 4 -->
+        <div class="pnode" id="pnode-4" data-node="4">
+          <div class="pnode-connector left"></div>
+          <div class="pnode-header">
+            <div class="pnode-num">04</div>
+            <div class="pnode-icon">🚀</div>
+          </div>
+          <h3 class="pnode-title">Shopify</h3>
+          <p class="pnode-sub">Live Deployment</p>
+          <div class="pnode-tools">
+            <span class="tool-badge">Shopify Admin API</span>
+            <span class="tool-badge">REST 2024-01</span>
+          </div>
+          <div class="pnode-detail">
+            <ul>
+              <li>Creates collections via Admin API</li>
+              <li>Publishes 3 products with full metadata</li>
+              <li>Generates About Us page live</li>
+              <li>Rate-limited to 2 req/sec (production-safe)</li>
+            </ul>
+            <div class="pnode-output">
+              <span class="output-label">Output →</span> <code>shopify_schema.json</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-image reveal-up">
+      <img src="ai_pipeline_viz.png" alt="AI Pipeline Visualization" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ── RESULTS ─────────────────────────────────────────── -->
+<section id="results">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-tag">Live Output</span>
+      <h2 class="section-title">Real Results from a<br><em>Real Run.</em></h2>
+      <p class="section-sub">These are actual outputs generated by the agent — deployed live to leumiere-store.myshopify.com</p>
+    </div>
+
+    <div class="results-tabs reveal-up">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="products">Products</button>
+        <button class="tab-btn" data-tab="research">Research</button>
+        <button class="tab-btn" data-tab="strategy">Strategy</button>
+        <button class="tab-btn" data-tab="store">Store</button>
+      </div>
+
+      <!-- PRODUCTS TAB -->
+      <div class="tab-content active" id="tab-products">
+        <div class="product-showcase">
+          <div class="product-main-image reveal-up">
+            <img src="lumiere_products.png" alt="Lumière Product Line" loading="lazy"/>
+            <div class="product-image-caption">Generated by AI · Deployed to Shopify</div>
+          </div>
+          <div class="product-cards">
+            <div class="prod-card reveal-up delay-1">
+              <div class="prod-card-top">
+                <div class="prod-badge">HERO PRODUCT</div>
+                <div class="prod-price">₹1,299</div>
+              </div>
+              <h3 class="prod-name">Lumière Noir</h3>
+              <p class="prod-desc">200g matte-black jar, Sandalwood & Oud, evening hero. Hand-poured in small batches. 45+ hour burn time.</p>
+              <div class="prod-tags">
+                <span>Sandalwood & Oud</span>
+                <span>200g</span>
+                <span>45hr burn</span>
+              </div>
+              <div class="prod-status deployed">✓ Deployed to Shopify</div>
+            </div>
+            <div class="prod-card reveal-up delay-2">
+              <div class="prod-card-top">
+                <div class="prod-badge entry">ENTRY</div>
+                <div class="prod-price">₹999</div>
+              </div>
+              <h3 class="prod-name">Lumière Blanc</h3>
+              <p class="prod-desc">150g ivory ceramic, White Tea & Bergamot, morning ritual. A whisper of luxury for everyday moments.</p>
+              <div class="prod-tags">
+                <span>White Tea & Bergamot</span>
+                <span>150g</span>
+                <span>35hr burn</span>
+              </div>
+              <div class="prod-status deployed">✓ Deployed to Shopify</div>
+            </div>
+            <div class="prod-card reveal-up delay-3">
+              <div class="prod-card-top">
+                <div class="prod-badge gift">GIFT SET</div>
+                <div class="prod-price">₹2,199</div>
+              </div>
+              <h3 class="prod-name">La Nuit Gift Set</h3>
+              <p class="prod-desc">2×100g in a magnetic gift box. Rose Jasmine & Cedarwood. The definitive Lumière gifting experience.</p>
+              <div class="prod-tags">
+                <span>Rose Jasmine</span>
+                <span>2×100g</span>
+                <span>Gift Box</span>
+              </div>
+              <div class="prod-status deployed">✓ Deployed to Shopify</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESEARCH TAB -->
+      <div class="tab-content" id="tab-research">
+        <div class="research-grid">
+          <div class="research-block reveal-up">
+            <h4 class="rb-title">🏆 Competitors Identified</h4>
+            <div class="competitor-list">
+              <div class="comp-item">
+                <div class="comp-rank">1</div>
+                <div class="comp-info">
+                  <div class="comp-name">The Forest Essentials</div>
+                  <div class="comp-range">₹1,200 – ₹5,000</div>
+                  <div class="comp-pos">Ultra-premium Ayurvedic beauty</div>
+                </div>
+              </div>
+              <div class="comp-item">
+                <div class="comp-rank">2</div>
+                <div class="comp-info">
+                  <div class="comp-name">Neso & Co</div>
+                  <div class="comp-range">₹799 – ₹2,999</div>
+                  <div class="comp-pos">Artisan soy candles, wellness-first</div>
+                </div>
+              </div>
+              <div class="comp-item">
+                <div class="comp-rank">3</div>
+                <div class="comp-info">
+                  <div class="comp-name">Bombay Candle Company</div>
+                  <div class="comp-range">₹899 – ₹2,499</div>
+                  <div class="comp-pos">Local heritage narrative</div>
+                </div>
+              </div>
+              <div class="comp-item">
+                <div class="comp-rank">4</div>
+                <div class="comp-info">
+                  <div class="comp-name">Juicy Chemistry</div>
+                  <div class="comp-range">₹599 – ₹3,500</div>
+                  <div class="comp-pos">Organic certified transparency</div>
+                </div>
+              </div>
+              <div class="comp-item">
+                <div class="comp-rank">5</div>
+                <div class="comp-info">
+                  <div class="comp-name">Soulflower</div>
+                  <div class="comp-range">₹399 – ₹1,999</div>
+                  <div class="comp-pos">Mass-premium wellness brand</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="research-block reveal-up delay-1">
+            <h4 class="rb-title">📊 Market Pricing Segments</h4>
+            <div class="pricing-chart">
+              <div class="price-bar-row">
+                <span class="pb-label">Budget</span>
+                <div class="pb-track"><div class="pb-fill" style="width:20%">₹200–499</div></div>
+              </div>
+              <div class="price-bar-row">
+                <span class="pb-label">Mid</span>
+                <div class="pb-track"><div class="pb-fill mid" style="width:40%">₹500–899</div></div>
+              </div>
+              <div class="price-bar-row">
+                <span class="pb-label">Premium</span>
+                <div class="pb-track"><div class="pb-fill prem" style="width:70%">₹900–2,499</div></div>
+              </div>
+              <div class="price-bar-row">
+                <span class="pb-label">Ultra</span>
+                <div class="pb-track"><div class="pb-fill ultra" style="width:100%">₹2,500+</div></div>
+              </div>
+            </div>
+            <div class="lumiere-positioning">
+              <span class="lp-badge">Lumière targets Premium tier</span>
+              <p>Entry ₹999 · Hero ₹1,299 · Gift ₹2,199</p>
+            </div>
+          </div>
+
+          <div class="research-block full reveal-up delay-2">
+            <h4 class="rb-title">🕯️ Top Trending Scents</h4>
+            <div class="scent-tags">
+              <span class="scent-tag">Sandalwood & Oud</span>
+              <span class="scent-tag">Rose & Jasmine</span>
+              <span class="scent-tag">White Tea & Bergamot</span>
+              <span class="scent-tag">Cedarwood & Vetiver</span>
+              <span class="scent-tag">Mogra & Musk</span>
+              <span class="scent-tag">Amber & Citrus</span>
+            </div>
+            <div class="seasonal-ops">
+              <div class="season-item">🪔 <strong>Diwali Sets</strong> · 35–40% of annual revenue</div>
+              <div class="season-item">🌹 <strong>Valentine's Day</strong> · Duo pairings</div>
+              <div class="season-item">🌧️ <strong>Monsoon Mood</strong> · Petrichor scents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STRATEGY TAB -->
+      <div class="tab-content" id="tab-strategy">
+        <div class="strategy-grid">
+          <div class="strat-block reveal-up">
+            <h4 class="rb-title">🎨 Color Palette</h4>
+            <div class="palette-grid">
+              <div class="pal-swatch" style="background:#0E0C09">
+                <span class="pal-hex">#0E0C09</span>
+                <span class="pal-name">Lumière Noir</span>
+              </div>
+              <div class="pal-swatch" style="background:#C9A55A">
+                <span class="pal-hex">#C9A55A</span>
+                <span class="pal-name">Champagne Gold</span>
+              </div>
+              <div class="pal-swatch" style="background:#E2C07A">
+                <span class="pal-hex">#E2C07A</span>
+                <span class="pal-name">Warm Gold</span>
+              </div>
+              <div class="pal-swatch light" style="background:#FAF7F0">
+                <span class="pal-hex">#FAF7F0</span>
+                <span class="pal-name">Ivory</span>
+              </div>
+              <div class="pal-swatch light" style="background:#B5A898">
+                <span class="pal-hex">#B5A898</span>
+                <span class="pal-name">Warm Taupe</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="strat-block reveal-up delay-1">
+            <h4 class="rb-title">🔤 Typography System</h4>
+            <div class="typo-showcase">
+              <div class="typo-item">
+                <div class="typo-sample cormorant">Light your finest moments.</div>
+                <div class="typo-meta">
+                  <strong>Cormorant Garamond</strong><br>
+                  Display — Headlines, Product Names
+                </div>
+              </div>
+              <div class="typo-item">
+                <div class="typo-sample jost">Premium handcrafted soy candles</div>
+                <div class="typo-meta">
+                  <strong>Jost</strong><br>
+                  Body — Navigation, Copy, Buttons
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="strat-block reveal-up delay-2">
+            <h4 class="rb-title">👤 Target Persona</h4>
+            <div class="persona-card">
+              <div class="persona-avatar">P</div>
+              <div class="persona-info">
+                <div class="persona-name">Priya</div>
+                <div class="persona-age">28–38 · Urban Professional · Metro India</div>
+                <p class="persona-desc">Design-conscious, buys intentionally. Her home is curated, not decorated. Wants a luxury candle brand that feels Indian without being old-fashioned.</p>
+                <div class="persona-tags">
+                  <span>Metro lifestyle</span>
+                  <span>Premium buyer</span>
+                  <span>Design-first</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="strat-block reveal-up delay-3">
+            <h4 class="rb-title">💬 Brand Voice</h4>
+            <blockquote class="brand-voice-quote">
+              "Write as a woman thinks when buying something beautiful for herself. Sensory, unhurried, precise. Short sentences. Never explain — evoke."
+            </blockquote>
+            <div class="brand-pillars">
+              <div class="bp-item">✦ Handcrafted with intention</div>
+              <div class="bp-item">✦ Fragrance as ritual</div>
+              <div class="bp-item">✦ Indian luxury redefined</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STORE TAB -->
+      <div class="tab-content" id="tab-store">
+        <div class="store-preview">
+          <div class="store-mockup reveal-up">
+            <div class="mockup-browser">
+              <div class="mockup-bar">
+                <div class="mockup-dots"><span></span><span></span><span></span></div>
+                <div class="mockup-url">leumiere-store.myshopify.com</div>
+              </div>
+              <div class="mockup-screen">
+                <div class="mock-nav">
+                  <span class="mock-logo">Lumière</span>
+                  <div class="mock-nav-links"><span>Shop</span><span>Story</span><span>Gift</span></div>
+                </div>
+                <div class="mock-hero">
+                  <div class="mock-hero-content">
+                    <div class="mock-hero-tag">LUMIÈRE</div>
+                    <div class="mock-hero-h1">Light your finest moments.</div>
+                    <div class="mock-hero-sub">Premium handcrafted soy candles for the modern Indian woman.</div>
+                    <div class="mock-hero-btn">Shop The Collection →</div>
+                  </div>
+                </div>
+                <div class="mock-products">
+                  <div class="mock-prod-card">
+                    <div class="mock-prod-img noir"></div>
+                    <div class="mock-prod-name">Lumière Noir</div>
+                    <div class="mock-prod-price">₹1,299</div>
+                  </div>
+                  <div class="mock-prod-card">
+                    <div class="mock-prod-img blanc"></div>
+                    <div class="mock-prod-name">Lumière Blanc</div>
+                    <div class="mock-prod-price">₹999</div>
+                  </div>
+                  <div class="mock-prod-card">
+                    <div class="mock-prod-img gift"></div>
+                    <div class="mock-prod-name">La Nuit Gift Set</div>
+                    <div class="mock-prod-price">₹2,199</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="store-details reveal-up delay-1">
+            <div class="sd-item">
+              <div class="sd-icon">✓</div>
+              <div class="sd-text">
+                <strong>Collection Created</strong>
+                <span>The Signature Collection · Published</span>
+              </div>
+            </div>
+            <div class="sd-item">
+              <div class="sd-icon">✓</div>
+              <div class="sd-text">
+                <strong>3 Products Deployed</strong>
+                <span>With variants, SEO meta, HTML descriptions</span>
+              </div>
+            </div>
+            <div class="sd-item">
+              <div class="sd-icon">✓</div>
+              <div class="sd-text">
+                <strong>About Us Page Live</strong>
+                <span>/about-us · Full brand story</span>
+              </div>
+            </div>
+            <div class="sd-item">
+              <div class="sd-icon">✓</div>
+              <div class="sd-text">
+                <strong>SEO Metadata Generated</strong>
+                <span>Title tags, meta descriptions, handles</span>
+              </div>
+            </div>
+            <div class="sd-item">
+              <div class="sd-icon">✓</div>
+              <div class="sd-text">
+                <strong>Schema JSON Exported</strong>
+                <span>API-ready import file for re-use</span>
+              </div>
+            </div>
+            <a href="https://leumiere-store.myshopify.com" target="_blank" class="btn-primary mt-16">
+              Visit Live Store →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TECH STACK ──────────────────────────────────────── -->
+<section id="tech-stack">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <span class="section-tag">Built With</span>
+      <h2 class="section-title">Production-Grade<br><em>Tech Stack</em></h2>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card reveal-up delay-1" id="tc-langgraph">
+        <div class="tc-logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="8" height="8" rx="2" fill="#C9A55A"/><rect x="14" y="2" width="8" height="8" rx="2" fill="#C9A55A" opacity=".6"/><rect x="2" y="14" width="8" height="8" rx="2" fill="#C9A55A" opacity=".6"/><rect x="14" y="14" width="8" height="8" rx="2" fill="#C9A55A"/><path d="M10 6h4M6 10v4M18 10v4M10 18h4" stroke="#C9A55A" stroke-width="1.5"/></svg>
+        </div>
+        <h4 class="tc-name">LangGraph</h4>
+        <p class="tc-desc">StateGraph with 4 sequential nodes, typed AgentState passing, and clean edge definitions. The backbone of the entire agent pipeline.</p>
+        <div class="tc-tag">Orchestration</div>
+      </div>
+
+      <div class="tech-card reveal-up delay-2" id="tc-groq">
+        <div class="tc-logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#C9A55A" stroke-width="1.5"/><path d="M8 12h8M12 8l4 4-4 4" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h4 class="tc-name">Groq + LLaMA 3.3</h4>
+        <p class="tc-desc">llama-3.3-70b-versatile for all LLM reasoning. JSON mode for structured extraction. Used across all 4 nodes with custom system prompts.</p>
+        <div class="tc-tag">AI Inference</div>
+      </div>
+
+      <div class="tech-card reveal-up delay-3" id="tc-tavily">
+        <div class="tc-logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#C9A55A" stroke-width="1.5"/><path d="M20 20l-3-3" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round"/><path d="M8 11h6M11 8v6" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h4 class="tc-name">Tavily Search API</h4>
+        <p class="tc-desc">Real-time web intelligence — competitor search, trend analysis, and pricing research. Both search() and search_answer() modes used.</p>
+        <div class="tc-tag">Web Intelligence</div>
+      </div>
+
+      <div class="tech-card reveal-up delay-4" id="tc-shopify">
+        <div class="tc-logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M20 7l-1-5-3 .5M4 7h16v13a1 1 0 01-1 1H5a1 1 0 01-1-1V7zM8 7V4a4 4 0 018 0v3" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4 class="tc-name">Shopify Admin API</h4>
+        <p class="tc-desc">REST API 2024-01 for live store deployment. Creates collections, products, and pages. Rate-limited to 2 req/sec for production safety.</p>
+        <div class="tc-tag">Deployment</div>
+      </div>
+
+      <div class="tech-card reveal-up delay-1" id="tc-bs4">
+        <div class="tc-logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h10" stroke="#C9A55A" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="18" r="2" stroke="#C9A55A" stroke-width="1.5"/></svg>
+        </div>
+        <h4 class="tc-name">BeautifulSoup4</h4>
+        <p class="tc-desc">Live competitor page scraping for authentic market data. HTML parsing and text extraction from real brand websites.</p>
+        <div class="tc-tag">Web Scraping</div>
+      </div>
+
+      <div class="tech-card reveal-up delay-2" id="tc-python">
+        <div class="tc-logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 7 4 7 6v2h5v1H5C3 9 2 10 2 13s1.5 4 3 4h2v-2.5C7 12 9 11 12 11s5 1 5 3.5V17h2c1.5 0 3-1.5 3-4s-1-4-3-4h-7V8h5V6c0-2-1-4-5-4z" stroke="#C9A55A" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h4 class="tc-name">Python 3.11</h4>
+        <p class="tc-desc">TypedDict state management, robust error handling, fallback chains, dotenv config, and clean modular architecture.</p>
+        <div class="tc-tag">Runtime</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────────── -->
+<section id="about">
+  <div class="about-image-bg">
+    <img src="lumiere_about_bg.png" alt="Lumière Studio" />
+    <div class="about-overlay"></div>
+  </div>
+  <div class="container about-content">
+    <div class="about-text reveal-up">
+      <span class="section-tag light">The Assignment</span>
+      <h2 class="section-title light">Built for<br><em>Perfomity Media</em></h2>
+      <p class="about-desc">This project was created as part of Perfomity Media's AI Agent Developer screening assignment. The goal: build a fully autonomous agent that takes a simple brand brief and produces a complete, live Shopify store without any manual intervention.</p>
+      <p class="about-desc">Every component — from the LangGraph pipeline architecture to the fallback logic, from the brand strategy prompts to the rate-limited Shopify deployment — was designed to demonstrate production-grade agent engineering.</p>
+
+      <div class="about-metrics">
+        <div class="am-item">
+          <div class="am-num">4</div>
+          <div class="am-label">Agent Nodes</div>
+        </div>
+        <div class="am-item">
+          <div class="am-num">12+</div>
+          <div class="am-label">LLM Calls</div>
+        </div>
+        <div class="am-item">
+          <div class="am-num">~2min</div>
+          <div class="am-label">Full Runtime</div>
+        </div>
+        <div class="am-item">
+          <div class="am-num">0</div>
+          <div class="am-label">Manual Steps</div>
+        </div>
+      </div>
+
+      <a href="https://github.com/Dpss123/perfomity-agent" target="_blank" class="btn-primary mt-16">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        View Full Source Code
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Lumière <span>AI</span></div>
+        <p>An autonomous Shopify Store Builder Agent built with LangGraph, Groq LLaMA 3.3, Tavily Search, and the Shopify Admin API.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Project</h5>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#results">Live Results</a>
+        <a href="#tech-stack">Tech Stack</a>
+      </div>
+      <div class="footer-links">
+        <h5>Output Files</h5>
+        <a href="output/research_output.json" target="_blank">research_output.json</a>
+        <a href="output/store_assets.json" target="_blank">store_assets.json</a>
+        <a href="output/shopify_schema.json" target="_blank">shopify_schema.json</a>
+        <a href="output/handoff_report.md" target="_blank">handoff_report.md</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built for Perfomity Media · AI Agent Developer Screening Assignment</div>
+      <a href="https://github.com/Dpss123/perfomity-agent" target="_blank" class="footer-gh">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
