@@ -159,18 +159,13 @@
             <div class="si-dot"><span>3</span></div>
             <div class="si-label">Personality</div>
           </div>
-          <div class="si-line" id="sl-3"></div>
-          <div class="si-item" id="si-4">
-            <div class="si-dot"><span>4</span></div>
-            <div class="si-label">API Setup</div>
-          </div>
         </div>
       </div>
 
       <!-- STEP 1: Brand Basics -->
       <div class="step-panel active" id="sp-1">
         <div class="sp-header">
-          <div class="sp-step-tag">Step 1 of 4</div>
+          <div class="sp-step-tag">Step 1 of 3</div>
           <h2 class="sp-title">Your <em>Brand</em></h2>
           <p class="sp-sub">Tell us what you're building.</p>
         </div>
@@ -199,7 +194,7 @@
       <!-- STEP 2: Target Market -->
       <div class="step-panel" id="sp-2">
         <div class="sp-header">
-          <div class="sp-step-tag">Step 2 of 4</div>
+          <div class="sp-step-tag">Step 2 of 3</div>
           <h2 class="sp-title">Your <em>Market</em></h2>
           <p class="sp-sub">Who are you selling to, and at what price?</p>
         </div>
@@ -251,7 +246,7 @@
       <!-- STEP 3: Brand Personality -->
       <div class="step-panel" id="sp-3">
         <div class="sp-header">
-          <div class="sp-step-tag">Step 3 of 4</div>
+          <div class="sp-step-tag">Step 3 of 3</div>
           <h2 class="sp-title">Brand <em>Personality</em></h2>
           <p class="sp-sub">How should your brand feel? What's the vibe?</p>
         </div>
@@ -280,49 +275,6 @@
           <div class="field-group">
             <label class="field-label" for="f-extra">Anything else? <span class="field-hint">(optional)</span></label>
             <textarea id="f-extra" class="field-textarea" rows="3" placeholder="Pages needed, special products, any specific requirements..." oninput="updatePreview()"></textarea>
-          </div>
-        </div>
-        <div class="sp-nav">
-          <button class="btn-ghost-sm" onclick="prevStep()">← Back</button>
-          <button class="btn-primary" onclick="nextStep()">Next: API Setup →</button>
-        </div>
-      </div>
-
-      <!-- STEP 4: API Setup -->
-      <div class="step-panel" id="sp-4">
-        <div class="sp-header">
-          <div class="sp-step-tag">Step 4 of 4</div>
-          <h2 class="sp-title">API <em>Setup</em></h2>
-          <p class="sp-sub">These are pre-loaded from your .env file. Override only if needed.</p>
-        </div>
-        <div class="sp-fields">
-          <div class="api-notice">
-            <div class="api-notice-icon">🔐</div>
-            <div class="api-notice-text">
-              If you've already set up your <code>.env</code> file, you can skip this step and click <strong>Build My Store</strong> directly.
-            </div>
-          </div>
-          <div class="field-group">
-            <label class="field-label" for="f-groq">Groq API Key <span class="field-hint">(overrides .env)</span></label>
-            <input type="password" id="f-groq" class="field-input" placeholder="gsk_..."/>
-            <div class="field-sub">Get free key at <a href="https://console.groq.com" target="_blank">console.groq.com</a></div>
-          </div>
-          <div class="field-group">
-            <label class="field-label" for="f-tavily">Tavily API Key <span class="field-hint">(overrides .env)</span></label>
-            <input type="password" id="f-tavily" class="field-input" placeholder="tvly-..."/>
-            <div class="field-sub">Get free key at <a href="https://tavily.com" target="_blank">tavily.com</a></div>
-          </div>
-          <div class="field-divider">
-            <span>Shopify Deployment (Optional)</span>
-          </div>
-          <div class="field-group">
-            <label class="field-label" for="f-shop-url">Shopify Store URL</label>
-            <input type="text" id="f-shop-url" class="field-input" placeholder="your-store.myshopify.com"/>
-          </div>
-          <div class="field-group">
-            <label class="field-label" for="f-shop-token">Shopify Access Token</label>
-            <input type="password" id="f-shop-token" class="field-input" placeholder="shpat_..."/>
-            <div class="field-sub">Admin → Settings → Apps → Develop apps → Create app</div>
           </div>
         </div>
         <div class="sp-nav">
